@@ -1,8 +1,8 @@
 import { useDrop } from 'react-dnd'
-import { PlusIcon } from '@heroicons/react/24/outline/PlusIcon'
-import { SwatchIcon } from '@heroicons/react/24/outline/SwatchIcon'
+import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
+import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
 
-export default function StageDropTarget() {
+export default function StageDropTarget(props) {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: 'color-card',
     collect: (monitor) => ({
