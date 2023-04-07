@@ -19,14 +19,15 @@ export default function ColorCard(props) {
         </h2>
         <span className='text-sm font-extralight'>{ props.colorInfo.code }</span>
       </div>
-      <Image
-        className='border rounded'
-        src={ swatchURL(props.colorInfo.swatchName) }
-        alt='{ props.colorInfo.name }'
-        width='128'
-        height='128'
-        draggable='false'
-      />
+      <div className='w-32 h-32 relative'>
+        <Image
+          className='border rounded'
+          src={ swatchURL(props.colorInfo.swatchName) }
+          alt='{ props.colorInfo.name }'
+          fill
+          draggable='false'
+        />
+      </div>
     </div>
   )
 }
