@@ -1,0 +1,2536 @@
+{
+  "colors": [
+    {
+      "code": "B47-087-258",
+      "name": "A B Sea",
+      "swatchName": "Resene_A_B_Sea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V28-029-328",
+      "name": "Ab Fab",
+      "swatchName": "Resene_Ab_Fab.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B63-019-235",
+      "name": "Abacus",
+      "swatchName": "Resene_Abacus.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y67-035-088",
+      "name": "Abanakee",
+      "swatchName": "Resene_Abanakee.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y90-013-085",
+      "name": "Albescent White",
+      "swatchName": "Resene_Albescent_White.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B32-019-258",
+      "name": "Allegro",
+      "swatchName": "Resene_Allegro.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N84-004-012",
+      "name": "Alto",
+      "swatchName": "Resene_Alto.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B35-028-231",
+      "name": "Aquarium",
+      "swatchName": "Resene_Aquarium.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y61-022-084",
+      "name": "Arrowtown",
+      "swatchName": "Resene_Arrowtown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B38-052-231",
+      "name": "Astronaut Blue",
+      "swatchName": "Resene_Astronaut_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N89-004-107",
+      "name": "Athens Grey",
+      "swatchName": "Resene_Athens_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B33-064-279",
+      "name": "Aviator",
+      "swatchName": "Resene_Aviator.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G33-009-187",
+      "name": "Aztec",
+      "swatchName": "Resene_Aztec.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G63-030-123",
+      "name": "Bach",
+      "swatchName": "Resene_Bach.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR68-045-070",
+      "name": "Backcountry",
+      "swatchName": "Resene_Backcountry.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B46-084-237",
+      "name": "Bahama Blue",
+      "swatchName": "Resene_Bahama_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N37-002-259",
+      "name": "Baltic Sea",
+      "swatchName": "Resene_Baltic_Sea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N91-007-103",
+      "name": "Barely There",
+      "swatchName": "Resene_Barely_There.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B29-009-283",
+      "name": "Style Pasifika Night Fox",
+      "swatchName": "Resene_Style_Pasifika_Night_Fox.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR35-024-038",
+      "name": "Bean",
+      "swatchName": "Resene_Bean.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR55-026-075",
+      "name": "Beaten Track",
+      "swatchName": "Resene_Beaten_Track.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y35-024-081",
+      "name": "Birch",
+      "swatchName": "Resene_Birch.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y84-026-074",
+      "name": "Biscotti",
+      "swatchName": "Resene_Biscotti.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O68-060-059",
+      "name": "Biscuit Brown",
+      "swatchName": "Resene_Biscuit_Brown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N24-000-098",
+      "name": "Black",
+      "swatchName": "Resene_Black.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR33-015-070",
+      "name": "Black Magic",
+      "swatchName": "Resene_Black_Magic.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B35-014-284",
+      "name": "Black Marlin",
+      "swatchName": "Resene_Black_Marlin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B29-013-232",
+      "name": "Black Pearl",
+      "swatchName": "Resene_Black_Pearl.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR25-010-052",
+      "name": "Blackout",
+      "swatchName": "Resene_Blackout.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y88-015-078",
+      "name": "Blanc",
+      "swatchName": "Resene_Blanc.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B29-014-216",
+      "name": "Bledisloe",
+      "swatchName": "Resene_Bledisloe.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B39-058-260",
+      "name": "Blue Clouds",
+      "swatchName": "Resene_Blue_Clouds.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G63-014-149",
+      "name": "Blue Smoke",
+      "swatchName": "Resene_Blue_Smoke.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N28-005-068",
+      "name": "Bokara Grey",
+      "swatchName": "Resene_Bokara_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G79-015-099",
+      "name": "Bone White",
+      "swatchName": "Resene_Bone_White.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R45-110-038",
+      "name": "Bonfire",
+      "swatchName": "Resene_Bonfire.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N61-006-148",
+      "name": "Boulder",
+      "swatchName": "Resene_Boulder.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y52-083-071",
+      "name": "Brazil",
+      "swatchName": "Resene_Brazil.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR37-024-062",
+      "name": "Bronze",
+      "swatchName": "Resene_Bronze.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y44-046-084",
+      "name": "Bronze Olive",
+      "swatchName": "Resene_Bronze_Olive.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y44-044-085",
+      "name": "Bronzetone",
+      "swatchName": "Resene_Bronzetone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O45-068-053",
+      "name": "Bull Shot",
+      "swatchName": "Resene_Bull_Shot.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N30-006-253",
+      "name": "Bunker",
+      "swatchName": "Resene_Bunker.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B32-030-265",
+      "name": "Bunting",
+      "swatchName": "Resene_Bunting.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G35-028-166",
+      "name": "Bush",
+      "swatchName": "Resene_Bush.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW0812",
+      "name": "Bushtrack",
+      "swatchName": "Resene_Bushtrack.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R32-028-015",
+      "name": "Cab Sav",
+      "swatchName": "Resene_Cab_Sav.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V22-013-354",
+      "name": "Caffeine",
+      "swatchName": "Resene_Caffeine.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR71-055-063",
+      "name": "Calibre",
+      "swatchName": "Resene_Calibre.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G36-033-117",
+      "name": "Campground",
+      "swatchName": "Resene_Campground.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-045-078",
+      "name": "Canterbury Clay",
+      "swatchName": "Resene_Canterbury_Clay.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G89-010-157",
+      "name": "Carefree",
+      "swatchName": "Resene_Carefree.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y67-029-083",
+      "name": "Cargo",
+      "swatchName": "Resene_Cargo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-038-061",
+      "name": "Cashmere",
+      "swatchName": "Resene_Cashmere.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B77-010-230",
+      "name": "Casper",
+      "swatchName": "Resene_Casper.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR71-034-078",
+      "name": "Castaway",
+      "swatchName": "Resene_Castaway.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B39-018-280",
+      "name": "Catwalk",
+      "swatchName": "Resene_Catwalk.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR34-009-020",
+      "name": "Cave Rock",
+      "swatchName": "Resene_Cave_Rock.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B43-028-245",
+      "name": "Cello",
+      "swatchName": "Resene_Cello.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G36-020-170",
+      "name": "Celtic",
+      "swatchName": "Resene_Celtic.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B48-043-265",
+      "name": "Chambray",
+      "swatchName": "Resene_Chambray.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V75-014-303",
+      "name": "Chatelle",
+      "swatchName": "Resene_Chatelle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N25-002-289",
+      "name": "Chimney Sweep",
+      "swatchName": "Resene_Chimney_Sweep.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y75-038-086",
+      "name": "Chino",
+      "swatchName": "Resene_Chino.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N28-008-243",
+      "name": "Cinder",
+      "swatchName": "Resene_Cinder.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G33-034-188",
+      "name": "City Limits",
+      "swatchName": "Resene_City_Limits.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR37-029-068",
+      "name": "Clinker",
+      "swatchName": "Resene_Clinker.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G43-044-119",
+      "name": "Clover",
+      "swatchName": "Resene_Clover.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R36-024-030",
+      "name": "Cocoa Bean",
+      "swatchName": "Resene_Cocoa_Bean.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR32-019-058",
+      "name": "Cocoa Brown",
+      "swatchName": "Resene_Cocoa_Brown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR33-023-065",
+      "name": "Cola",
+      "swatchName": "Resene_Cola.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V71-052-295",
+      "name": "Cold Purple",
+      "swatchName": "Resene_Cold_Purple.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R80-015-023",
+      "name": "Cold Turkey",
+      "swatchName": "Resene_Cold_Turkey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR63-043-079",
+      "name": "Colins Wicket",
+      "swatchName": "Resene_Colins_Wicket.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N87-002-093",
+      "name": "Concrete",
+      "swatchName": "Resene_Concrete.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R33-031-016",
+      "name": "Contraband",
+      "swatchName": "Resene_Contraband.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G78-010-098",
+      "name": "Copyrite",
+      "swatchName": "Resene_Copyrite.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y73-019-081",
+      "name": "Cougar",
+      "swatchName": "Resene_Cougar.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G37-047-164",
+      "name": "County Green",
+      "swatchName": "Resene_County_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R32-034-017",
+      "name": "Courage",
+      "swatchName": "Resene_Courage.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V37-018-345",
+      "name": "Couture",
+      "swatchName": "Resene_Couture.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD001",
+      "name": "Crowshead",
+      "swatchName": "Resene_Crowshead.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR79-040-076",
+      "name": "Crusade",
+      "swatchName": "Resene_Crusade.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD015",
+      "name": "Daintree",
+      "swatchName": "Resene_Daintree.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O57-078-063",
+      "name": "Dark Buff",
+      "swatchName": "Resene_Dark_Buff.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G46-012-198",
+      "name": "Dark Slate",
+      "swatchName": "Resene_Dark_Slate.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R37-059-029",
+      "name": "Dark Tan",
+      "swatchName": "Resene_Dark_Tan.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N69-004-123",
+      "name": "Delta",
+      "swatchName": "Resene_Delta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N30-006-032",
+      "name": "Diesel",
+      "swatchName": "Resene_Diesel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR49-024-061",
+      "name": "Domino",
+      "swatchName": "Resene_Domino.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR45-009-002",
+      "name": "Don Juan",
+      "swatchName": "Resene_Don_Juan.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR57-027-064",
+      "name": "Donkey Brown",
+      "swatchName": "Resene_Donkey_Brown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR53-024-079",
+      "name": "Double Arrowtown",
+      "swatchName": "Resene_Double_Arrowtown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G72-016-092",
+      "name": "Double Ash",
+      "swatchName": "Resene_Double_Ash.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y85-019-079",
+      "name": "Double Blanc",
+      "swatchName": "Resene_Double_Blanc.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR46-024-045",
+      "name": "Double Buffalo",
+      "swatchName": "Resene_Double_Buffalo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR30-012-013",
+      "name": "Double Caffeine",
+      "swatchName": "Resene_Double_Caffeine.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR68-044-073",
+      "name": "Double Doeskin",
+      "swatchName": "Resene_Double_Doeskin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR70-032-073",
+      "name": "Double Drought",
+      "swatchName": "Resene_Double_Drought.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y56-014-084",
+      "name": "Double Friar Grey",
+      "swatchName": "Resene_Double_Friar_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N37-005-114",
+      "name": "Double Gravel",
+      "swatchName": "Resene_Double_Gravel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G64-022-101",
+      "name": "Double Lemon Grass",
+      "swatchName": "Resene_Double_Lemon_Grass.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G73-020-096",
+      "name": "Double Linen",
+      "swatchName": "Resene_Double_Linen.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR62-023-078",
+      "name": "Double Napa",
+      "swatchName": "Resene_Double_Napa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y70-037-081",
+      "name": "Double Pavlova",
+      "swatchName": "Resene_Double_Pavlova.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N74-002-022",
+      "name": "Double Rakaia",
+      "swatchName": "Resene_Double_Rakaia.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V30-010-291",
+      "name": "Double Revolver",
+      "swatchName": "Resene_Double_Revolver.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR54-014-073",
+      "name": "Double Stonehenge",
+      "swatchName": "Resene_Double_Stonehenge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y51-024-082",
+      "name": "Double Stonewall",
+      "swatchName": "Resene_Double_Stonewall.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y74-020-081",
+      "name": "Double Tea",
+      "swatchName": "Resene_Double_Tea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N83-006-043",
+      "name": "Dover White",
+      "swatchName": "Resene_Dover_White.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD011",
+      "name": "Downriver",
+      "swatchName": "Resene_Downriver.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR76-028-076",
+      "name": "Drought",
+      "swatchName": "Resene_Drought.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR43-047-059",
+      "name": "Drumbeat",
+      "swatchName": "Resene_Drumbeat.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B77-030-264",
+      "name": "Squirt",
+      "swatchName": "Resene_Squirt.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N36-006-001",
+      "name": "Eclipse",
+      "swatchName": "Resene_Eclipse.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V71-016-304",
+      "name": "Effortless",
+      "swatchName": "Resene_Effortless.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR73-011-034",
+      "name": "Eighth Buffalo",
+      "swatchName": "Resene_Eighth_Buffalo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y88-023-082",
+      "name": "Eighth Canterbury Clay",
+      "swatchName": "Resene_Eighth_Canterbury_Clay.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N64-005-121",
+      "name": "Eighth Gravel",
+      "swatchName": "Resene_Eighth_Gravel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G86-018-094",
+      "name": "Eighth Hillary",
+      "swatchName": "Resene_Eighth_Hillary.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR64-014-075",
+      "name": "Eighth Mondo",
+      "swatchName": "Resene_Eighth_Mondo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y81-011-079",
+      "name": "Eighth Pravda",
+      "swatchName": "Resene_Eighth_Pravda.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N79-006-075",
+      "name": "Eighth Stonehenge",
+      "swatchName": "Resene_Eighth_Stonehenge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y76-014-083",
+      "name": "Eighth Stonewall",
+      "swatchName": "Resene_Eighth_Stonewall.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N90-007-078",
+      "name": "Eighth Truffle",
+      "swatchName": "Resene_Eighth_Truffle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B62-009-256",
+      "name": "Eighth Tuna",
+      "swatchName": "Resene_Eighth_Tuna.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G79-010-170",
+      "name": "Emerge",
+      "swatchName": "Resene_Emerge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW8",
+      "name": "English Walnut",
+      "swatchName": "Resene_English_Walnut.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B46-040-283",
+      "name": "Enigma",
+      "swatchName": "Resene_Enigma.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G30-008-118",
+      "name": "Eternity",
+      "swatchName": "Resene_Eternity.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G52-018-096",
+      "name": "Evolution",
+      "swatchName": "Resene_Evolution.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B43-024-232",
+      "name": "Explorer",
+      "swatchName": "Resene_Explorer.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G89-012-119",
+      "name": "Feta",
+      "swatchName": "Resene_Feta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G37-040-133",
+      "name": "Feverpitch",
+      "swatchName": "Resene_Feverpitch.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y52-083-084",
+      "name": "Fiddlesticks",
+      "swatchName": "Resene_Fiddlesticks.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-049-063",
+      "name": "Flesh",
+      "swatchName": "Resene_Flesh.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V83-035-325",
+      "name": "Flower Power",
+      "swatchName": "Resene_Flower_Power.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B76-010-243",
+      "name": "Forecast",
+      "swatchName": "Resene_Forecast.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G37-022-140",
+      "name": "Forest Green",
+      "swatchName": "Resene_Forest_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y62-010-086",
+      "name": "Friar Grey",
+      "swatchName": "Resene_Friar_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G40-021-185",
+      "name": "Gable Green",
+      "swatchName": "Resene_Gable_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B33-047-278",
+      "name": "Galactica",
+      "swatchName": "Resene_Galactica.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N57-006-087",
+      "name": "Gauntlet",
+      "swatchName": "Resene_Gauntlet.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G49-031-149",
+      "name": "Gecko",
+      "swatchName": "Resene_Gecko.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N85-004-213",
+      "name": "Geyser",
+      "swatchName": "Resene_Geyser.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O68-061-068",
+      "name": "Gold Coast",
+      "swatchName": "Resene_Gold_Coast.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B63-029-222",
+      "name": "Gothic",
+      "swatchName": "Resene_Gothic.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G44-089-153",
+      "name": "Grass Stain",
+      "swatchName": "Resene_Grass_Stain.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G34-021-095",
+      "name": "Grasslands",
+      "swatchName": "Resene_Grasslands.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G80-038-104",
+      "name": "Green Mist",
+      "swatchName": "Resene_Green_Mist.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N73-006-251",
+      "name": "Grey Chateau",
+      "swatchName": "Resene_Grey_Chateau.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y70-027-089",
+      "name": "Grey Olive",
+      "swatchName": "Resene_Grey_Olive.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B32-011-234",
+      "name": "Gunmetal",
+      "swatchName": "Resene_Gunmetal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N60-005-127",
+      "name": "Gunsmoke",
+      "swatchName": "Resene_Gunsmoke.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B45-019-268",
+      "name": "Haast Shale",
+      "swatchName": "Resene_Haast_Shale.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y91-010-082",
+      "name": "Half Albescent White",
+      "swatchName": "Resene_Half_Albescent_White.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y67-019-084",
+      "name": "Half Arrowtown",
+      "swatchName": "Resene_Half_Arrowtown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N33-002-017",
+      "name": "Half Bokara Grey",
+      "swatchName": "Resene_Half_Bokara_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N88-008-258",
+      "name": "Half Breathless",
+      "swatchName": "Resene_Half_Breathless.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR69-039-080",
+      "name": "Half Colins Wicket",
+      "swatchName": "Resene_Half_Colins_Wicket.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G76-011-122",
+      "name": "Half Delta",
+      "swatchName": "Resene_Half_Delta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N33-005-016",
+      "name": "Half Diesel",
+      "swatchName": "Resene_Half_Diesel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-032-075",
+      "name": "Half Doeskin",
+      "swatchName": "Resene_Half_Doeskin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N84-006-164",
+      "name": "Half Emerge",
+      "swatchName": "Resene_Half_Emerge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N42-002-345",
+      "name": "Half Fuscous Grey",
+      "swatchName": "Resene_Half_Fuscous_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR68-023-070",
+      "name": "Half Gargoyle",
+      "swatchName": "Resene_Half_Gargoyle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G77-025-092",
+      "name": "Half Hillary",
+      "swatchName": "Resene_Half_Hillary.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N71-002-088",
+      "name": "Half Jumbo",
+      "swatchName": "Resene_Half_Jumbo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR71-049-060",
+      "name": "Half Kalgoorie Sands",
+      "swatchName": "Resene_Half_Kalgoorie_Sands.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N35-006-126",
+      "name": "Half Karaka",
+      "swatchName": "Resene_Half_Karaka.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR51-008-073",
+      "name": "Half Masala",
+      "swatchName": "Resene_Half_Masala.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y76-014-081",
+      "name": "Half Napa",
+      "swatchName": "Resene_Half_Napa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y88-023-090",
+      "name": "Half Parchment",
+      "swatchName": "Resene_Half_Parchment.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-022-070",
+      "name": "Half Sandcastle",
+      "swatchName": "Resene_Half_Sandcastle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y88-012-079",
+      "name": "Half Sandspit Brown",
+      "swatchName": "Resene_Half_Sandspit_Brown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N53-006-336",
+      "name": "Half Sidewinder",
+      "swatchName": "Resene_Half_Sidewinder.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N80-002-146",
+      "name": "Half Silver Chalice",
+      "swatchName": "Resene_Half_Silver_Chalice.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y84-025-082",
+      "name": "Half Sisal",
+      "swatchName": "Resene_Half_Sisal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N70-002-168",
+      "name": "Half Stack",
+      "swatchName": "Resene_Half_Stack.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR67-008-074",
+      "name": "Half Stonehenge",
+      "swatchName": "Resene_Half_Stonehenge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G66-009-097",
+      "name": "Half Tapa",
+      "swatchName": "Resene_Half_Tapa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N87-007-132",
+      "name": "Half Tasman",
+      "swatchName": "Resene_Half_Tasman.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y71-009-090",
+      "name": "Half Taupe Grey",
+      "swatchName": "Resene_Half_Taupe_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G90-011-092",
+      "name": "Half Titania",
+      "swatchName": "Resene_Half_Titania.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y84-009-084",
+      "name": "Half Truffle",
+      "swatchName": "Resene_Half_Truffle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N93-004-080",
+      "name": "Half Vista White",
+      "swatchName": "Resene_Half_Vista_White.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-014-143",
+      "name": "Haven",
+      "swatchName": "Resene_Haven.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y84-041-077",
+      "name": "Haystack",
+      "swatchName": "Resene_Haystack.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR70-012-032",
+      "name": "Hazy Lavender",
+      "swatchName": "Resene_Hazy_Lavender.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G29-009-099",
+      "name": "Helter Skelter",
+      "swatchName": "Resene_Helter_Skelter.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-042-099",
+      "name": "Hideaway",
+      "swatchName": "Resene_Hideaway.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G72-034-091",
+      "name": "Hillary",
+      "swatchName": "Resene_Hillary.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N74-006-196",
+      "name": "Hit Grey",
+      "swatchName": "Resene_Hit_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y83-028-088",
+      "name": "Hitchhiker",
+      "swatchName": "Resene_Hitchhiker.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B63-034-224",
+      "name": "Horizon",
+      "swatchName": "Resene_Horizon.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y48-059-077",
+      "name": "Horses Neck",
+      "swatchName": "Resene_Horses_Neck.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N84-005-286",
+      "name": "In The Mauve",
+      "swatchName": "Resene_In_The_Mauve.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR62-021-064",
+      "name": "Incognito",
+      "swatchName": "Resene_Incognito.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B26-017-270",
+      "name": "Indian Ink",
+      "swatchName": "Resene_Indian_Ink.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V55-012-348",
+      "name": "Innuendo",
+      "swatchName": "Resene_Innuendo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G66-009-165",
+      "name": "Inside Back",
+      "swatchName": "Resene_Inside_Back.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD005",
+      "name": "Iroko",
+      "swatchName": "Resene_Iroko.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N86-002-236",
+      "name": "Iron",
+      "swatchName": "Resene_Iron.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B42-022-240",
+      "name": "Ivanhoe",
+      "swatchName": "Resene_Ivanhoe.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD019",
+      "name": "Jacaranda",
+      "swatchName": "Resene_Jacaranda.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V36-051-294",
+      "name": "Jacarta",
+      "swatchName": "Resene_Jacarta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR46-018-071",
+      "name": "Judge Grey",
+      "swatchName": "Resene_Judge_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N64-001-095",
+      "name": "Jumbo",
+      "swatchName": "Resene_Jumbo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR52-019-061",
+      "name": "Kabul",
+      "swatchName": "Resene_Kabul.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B55-041-254",
+      "name": "Kashmir Blue",
+      "swatchName": "Resene_Kashmir_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G36-036-141",
+      "name": "Kea",
+      "swatchName": "Resene_Kea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G43-024-106",
+      "name": "Kelp",
+      "swatchName": "Resene_Kelp.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R80-012-017",
+      "name": "Kidman",
+      "swatchName": "Resene_Kidman.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N34-005-036",
+      "name": "Kilamanjaro",
+      "swatchName": "Resene_Kilamanjaro.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G62-089-102",
+      "name": "Kombi",
+      "swatchName": "Resene_Kombi.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD033",
+      "name": "Kumera",
+      "swatchName": "Resene_Kumera.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-034-203",
+      "name": "Kumutoto",
+      "swatchName": "Resene_Kumutoto.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N57-006-142",
+      "name": "Lattitude",
+      "swatchName": "Resene_Lattitude.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G63-034-145",
+      "name": "Laurel",
+      "swatchName": "Resene_Laurel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G70-019-106",
+      "name": "Lemon Grass",
+      "swatchName": "Resene_Lemon_Grass.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G47-045-154",
+      "name": "Leprechaun",
+      "swatchName": "Resene_Leprechaun.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y56-030-087",
+      "name": "Lichen",
+      "swatchName": "Resene_Lichen.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N85-008-084",
+      "name": "Lighthouse",
+      "swatchName": "Resene_Lighthouse.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW11",
+      "name": "Limed Ash",
+      "swatchName": "Resene_Limed_Ash.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW12",
+      "name": "Limed Gum",
+      "swatchName": "Resene_Limed_Gum.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G80-020-097",
+      "name": "Linen",
+      "swatchName": "Resene_Linen.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B30-032-213",
+      "name": "Loch Ness",
+      "swatchName": "Resene_Loch_Ness.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR54-039-054",
+      "name": "Lone Ranger",
+      "swatchName": "Resene_Lone_Ranger.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R34-056-025",
+      "name": "Lonestar",
+      "swatchName": "Resene_Lonestar.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R47-039-037",
+      "name": "Lumberjack",
+      "swatchName": "Resene_Lumberjack.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G30-019-194",
+      "name": "Madagascar",
+      "swatchName": "Resene_Madagascar.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R33-062-020",
+      "name": "Madam M",
+      "swatchName": "Resene_Madam_M.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR70-023-073",
+      "name": "Malta",
+      "swatchName": "Resene_Malta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y83-026-071",
+      "name": "Manilla",
+      "swatchName": "Resene_Manilla.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V71-031-312",
+      "name": "Marionette",
+      "swatchName": "Resene_Marionette.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR33-011-045",
+      "name": "Marlin",
+      "swatchName": "Resene_Marlin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR45-009-077",
+      "name": "Masala",
+      "swatchName": "Resene_Masala.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR44-019-058",
+      "name": "Mash",
+      "swatchName": "Resene_Mash.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O56-071-068",
+      "name": "McKenzie",
+      "swatchName": "Resene_McKenzie.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B70-043-221",
+      "name": "Meltwater",
+      "swatchName": "Resene_Meltwater.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R53-027-004",
+      "name": "Memory",
+      "swatchName": "Resene_Memory.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N43-006-095",
+      "name": "Merlin",
+      "swatchName": "Resene_Merlin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B31-030-276",
+      "name": "Midnight Express",
+      "swatchName": "Resene_Midnight_Express.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G31-010-167",
+      "name": "Midnight Moss",
+      "swatchName": "Resene_Midnight_Moss.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V49-015-294",
+      "name": "Mobster",
+      "swatchName": "Resene_Mobster.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R36-045-033",
+      "name": "Moccaccino",
+      "swatchName": "Resene_Moccaccino.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR43-014-073",
+      "name": "Mondo",
+      "swatchName": "Resene_Mondo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G33-012-157",
+      "name": "Moroccan Palm",
+      "swatchName": "Resene_Moroccan_Palm.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y66-069-072",
+      "name": "Muddy Waters",
+      "swatchName": "Resene_Muddy_Waters.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR63-059-076",
+      "name": "Muesli",
+      "swatchName": "Resene_Muesli.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N89-004-208",
+      "name": "Mystic",
+      "swatchName": "Resene_Mystic.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR29-028-044",
+      "name": "Nala",
+      "swatchName": "Resene_Nala.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y70-020-082",
+      "name": "Napa",
+      "swatchName": "Resene_Napa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R32-050-029",
+      "name": "Nelson Red",
+      "swatchName": "Resene_Nelson_Red.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B80-026-266",
+      "name": "Nemo",
+      "swatchName": "Resene_Nemo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B66-014-259",
+      "name": "Neutral Bay",
+      "swatchName": "Resene_Neutral_Bay.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-033-095",
+      "name": "Neutral Green",
+      "swatchName": "Resene_Neutral_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B45-048-275",
+      "name": "Night Moves",
+      "swatchName": "Resene_Night_Moves.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N34-002-275",
+      "name": "Nocturnal",
+      "swatchName": "Resene_Nocturnal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y72-019-083",
+      "name": "Nomad",
+      "swatchName": "Resene_Nomad.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW16",
+      "name": "Nutmeg",
+      "swatchName": "Resene_Nutmeg.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR48-056-043",
+      "name": "Nutmeg",
+      "swatchName": "Resene_Nutmeg.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O47-066-064",
+      "name": "Oak",
+      "swatchName": "Resene_Oak.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR46-016-062",
+      "name": "Oilskin",
+      "swatchName": "Resene_Oilskin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y62-030-087",
+      "name": "Olive Haze",
+      "swatchName": "Resene_Olive_Haze.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O59-120-065",
+      "name": "Omega",
+      "swatchName": "Resene_Omega.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR64-029-071",
+      "name": "Outback",
+      "swatchName": "Resene_Outback.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y57-024-085",
+      "name": "Pablo",
+      "swatchName": "Resene_Pablo.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B55-011-232",
+      "name": "Pale Sky",
+      "swatchName": "Resene_Pale_Sky.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G50-020-119",
+      "name": "Panzano",
+      "swatchName": "Resene_Panzano.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y86-022-086",
+      "name": "Parchment",
+      "swatchName": "Resene_Parchment.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y77-038-083",
+      "name": "Pavlova",
+      "swatchName": "Resene_Pavlova.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G32-023-161",
+      "name": "Petanque",
+      "swatchName": "Resene_Petanque.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G70-014-150",
+      "name": "Pewter",
+      "swatchName": "Resene_Pewter.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR53-023-065",
+      "name": "Pine Cone",
+      "swatchName": "Resene_Pine_Cone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N90-003-098",
+      "name": "Porcelain",
+      "swatchName": "Resene_Porcelain.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B72-011-221",
+      "name": "Powder Blue",
+      "swatchName": "Resene_Powder_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR72-016-053",
+      "name": "Pristine Lavender",
+      "swatchName": "Resene_Pristine_Lavender.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G80-011-123",
+      "name": "Pumice",
+      "swatchName": "Resene_Pumice.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B50-017-273",
+      "name": "Quadrant Grey",
+      "swatchName": "Resene_Quadrant_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y58-027-086",
+      "name": "Quarry Stone",
+      "swatchName": "Resene_Quarry_Stone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y88-017-075",
+      "name": "Quarter Biscotti",
+      "swatchName": "Resene_Quarter_Biscotti.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y82-040-079",
+      "name": "Quarter Canterbury Clay",
+      "swatchName": "Resene_Quarter_Canterbury_Clay.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N81-004-117",
+      "name": "Quarter Delta",
+      "swatchName": "Resene_Quarter_Delta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y82-025-071",
+      "name": "Quarter Doeskin",
+      "swatchName": "Resene_Quarter_Doeskin.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y89-015-082",
+      "name": "Quarter Fossil",
+      "swatchName": "Resene_Quarter_Fossil.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N46-005-255",
+      "name": "Quarter Foundry",
+      "swatchName": "Resene_Quarter_Foundry.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR79-013-079",
+      "name": "Quarter Heathered Grey",
+      "swatchName": "Resene_Quarter_Heathered_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G82-002-091",
+      "name": "Quarter Hillary",
+      "swatchName": "Resene_Quarter_Hillary.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G88-011-094",
+      "name": "Quarter Linen",
+      "swatchName": "Resene_Quarter_Linen.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R60-030-030",
+      "name": "Quarter Lumberjack",
+      "swatchName": "Resene_Quarter_Lumberjack.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR79-019-069",
+      "name": "Quarter Malta",
+      "swatchName": "Resene_Quarter_Malta.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y81-013-083",
+      "name": "Quarter Napa",
+      "swatchName": "Resene_Quarter_Napa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N81-008-221",
+      "name": "Quarter Powder Blue",
+      "swatchName": "Resene_Quarter_Powder_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR75-013-078",
+      "name": "Quarter Pravda",
+      "swatchName": "Resene_Quarter_Pravda.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR69-010-071",
+      "name": "Quarter Sandstone",
+      "swatchName": "Resene_Quarter_Sandstone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N69-001-223",
+      "name": "Quarter Scarpa Flow",
+      "swatchName": "Resene_Quarter_Scarpa_Flow.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR75-009-075",
+      "name": "Quarter Stonehenge",
+      "swatchName": "Resene_Quarter_Stonehenge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y72-017-084",
+      "name": "Quarter Stonewall",
+      "swatchName": "Resene_Quarter_Stonewall.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G77-008-093",
+      "name": "Quarter Taupe Grey",
+      "swatchName": "Resene_Quarter_Taupe_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y89-010-084",
+      "name": "Quarter Tea",
+      "swatchName": "Resene_Quarter_Tea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N87-007-077",
+      "name": "Quarter Truffle",
+      "swatchName": "Resene_Quarter_Truffle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N84-008-097",
+      "name": "Quill Grey",
+      "swatchName": "Resene_Quill_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G30-012-182",
+      "name": "Racing Green",
+      "swatchName": "Resene_Racing_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N80-002-054",
+      "name": "Rakaia",
+      "swatchName": "Resene_Rakaia.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G46-018-104",
+      "name": "Raptor",
+      "swatchName": "Resene_Raptor.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR34-020-035",
+      "name": "Rebel",
+      "swatchName": "Resene_Rebel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R32-055-023",
+      "name": "Red Baron",
+      "swatchName": "Resene_Red_Baron.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V28-043-285",
+      "name": "Redemption Blue",
+      "swatchName": "Resene_Redemption_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R38-041-036",
+      "name": "Redwood",
+      "swatchName": "Resene_Redwood.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N39-008-075",
+      "name": "Relic",
+      "swatchName": "Resene_Relic.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R53-035-009",
+      "name": "Renaissance",
+      "swatchName": "Resene_Renaissance.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V34-013-289",
+      "name": "Revolver",
+      "swatchName": "Resene_Revolver.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B51-010-210",
+      "name": "River Bed",
+      "swatchName": "Resene_River_Bed.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G47-022-138",
+      "name": "Rivergum",
+      "swatchName": "Resene_Rivergum.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-013-143",
+      "name": "Robins Egg Blue",
+      "swatchName": "Resene_Robins_Egg_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR45-019-063",
+      "name": "Rock",
+      "swatchName": "Resene_Rock.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B72-025-255",
+      "name": "Rock Blue",
+      "swatchName": "Resene_Rock_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G59-009-202",
+      "name": "Rolling Stone",
+      "swatchName": "Resene_Rolling_Stone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O50-104-056",
+      "name": "Rumour Has It",
+      "swatchName": "Resene_Rumour_Has_It.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR53-024-042",
+      "name": "Russett",
+      "swatchName": "Resene_Russett.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B55-026-213",
+      "name": "Sabbatical",
+      "swatchName": "Resene_Sabbatical.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR45-018-050",
+      "name": "Saddle",
+      "swatchName": "Resene_Saddle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR36-049-065",
+      "name": "Saddle Brown",
+      "swatchName": "Resene_Saddle_Brown.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y82-042-077",
+      "name": "Saloon",
+      "swatchName": "Resene_Saloon.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V51-008-317",
+      "name": "Salt Box",
+      "swatchName": "Resene_Salt_Box.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR61-023-068",
+      "name": "Sand Dune",
+      "swatchName": "Resene_Sand_Dune.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR66-040-068",
+      "name": "Sandal",
+      "swatchName": "Resene_Sandal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR56-018-073",
+      "name": "Sandstone",
+      "swatchName": "Resene_Sandstone.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G56-022-159",
+      "name": "Scaramanga",
+      "swatchName": "Resene_Scaramanga.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R36-049-033",
+      "name": "Scoria",
+      "swatchName": "Resene_Scoria.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N52-006-333",
+      "name": "Scorpion",
+      "swatchName": "Resene_Scorpion.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G84-013-114",
+      "name": "Secrets",
+      "swatchName": "Resene_Secrets.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR78-015-067",
+      "name": "Serene",
+      "swatchName": "Resene_Serene.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G74-037-161",
+      "name": "Serenity",
+      "swatchName": "Resene_Serenity.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR70-014-075",
+      "name": "Settlement",
+      "swatchName": "Resene_Settlement.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N34-007-264",
+      "name": "Shark",
+      "swatchName": "Resene_Shark.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B54-073-210",
+      "name": "She'll Be Right",
+      "swatchName": "Resene_She'll_Be_Right.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW0801",
+      "name": "Sheer Black",
+      "swatchName": "Resene_Sheer_Black.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR75-031-078",
+      "name": "Shelter",
+      "swatchName": "Resene_Shelter.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B39-058-250",
+      "name": "Shipshape",
+      "swatchName": "Resene_Shipshape.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N65-003-154",
+      "name": "Silver Grey",
+      "swatchName": "Resene_Silver_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N80-006-102",
+      "name": "Silver Sand",
+      "swatchName": "Resene_Silver_Sand.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y80-027-081",
+      "name": "Sisal",
+      "swatchName": "Resene_Sisal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR34-020-054",
+      "name": "Slugger",
+      "swatchName": "Resene_Slugger.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B50-023-212",
+      "name": "Smalt Blue",
+      "swatchName": "Resene_Smalt_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR76-034-067",
+      "name": "Soul",
+      "swatchName": "Resene_Soul.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R80-017-038",
+      "name": "Soulmate",
+      "swatchName": "Resene_Soulmate.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR79-030-070",
+      "name": "Sour Dough",
+      "swatchName": "Resene_Sour_Dough.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R27-030-010",
+      "name": "Spitfire",
+      "swatchName": "Resene_Spitfire.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR62-025-066",
+      "name": "Squirrel",
+      "swatchName": "Resene_Squirrel.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B36-045-231",
+      "name": "St Kilda",
+      "swatchName": "Resene_St_Kilda.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B52-012-262",
+      "name": "Steam Roller",
+      "swatchName": "Resene_Steam_Roller.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N42-006-256",
+      "name": "Steel Grey",
+      "swatchName": "Resene_Steel_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR61-012-073",
+      "name": "Stonehenge",
+      "swatchName": "Resene_Stonehenge.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y59-023-083",
+      "name": "Stonewall",
+      "swatchName": "Resene_Stonewall.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B72-025-256",
+      "name": "Style Pasifika Lagoon Spray",
+      "swatchName": "Resene_Style_Pasifika_Lagoon_Spray.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B32-025-247",
+      "name": "Style Pasifika Ocean Deep",
+      "swatchName": "Resene_Style_Pasifika_Ocean_Deep.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B67-055-207",
+      "name": "Such Fun",
+      "swatchName": "Resene_Such_Fun.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B29-058-284",
+      "name": "Surfs Up",
+      "swatchName": "Resene_Surfs_Up.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G30-011-198",
+      "name": "Swamp",
+      "swatchName": "Resene_Swamp.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR46-016-074",
+      "name": "Tabac",
+      "swatchName": "Resene_Tabac.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR77-029-074",
+      "name": "Tabby",
+      "swatchName": "Resene_Tabby.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y71-036-087",
+      "name": "Tallow",
+      "swatchName": "Resene_Tallow.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G60-010-102",
+      "name": "Tapa",
+      "swatchName": "Resene_Tapa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V30-030-315",
+      "name": "Tarot",
+      "swatchName": "Resene_Tarot.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N83-007-142",
+      "name": "Tasman",
+      "swatchName": "Resene_Tasman.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y81-019-081",
+      "name": "Tea",
+      "swatchName": "Resene_Tea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y67-065-075",
+      "name": "Teak",
+      "swatchName": "Resene_Teak.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B39-040-223",
+      "name": "Teal Blue",
+      "swatchName": "Resene_Teal_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR71-022-037",
+      "name": "Thatch",
+      "swatchName": "Resene_Thatch.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y45-034-089",
+      "name": "Thatch Green",
+      "swatchName": "Resene_Thatch_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G37-037-195",
+      "name": "Tiber",
+      "swatchName": "Resene_Tiber.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR77-012-056",
+      "name": "Tide",
+      "swatchName": "Resene_Tide.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R38-050-035",
+      "name": "Tipping Point",
+      "swatchName": "Resene_Tipping_Point.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WW0811",
+      "name": "Tiri",
+      "swatchName": "Resene_Tiri.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O53-077-055",
+      "name": "Toffee",
+      "swatchName": "Resene_Toffee.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR29-018-044",
+      "name": "Toorak",
+      "swatchName": "Resene_Toorak.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G28-011-098",
+      "name": "Top Gear",
+      "swatchName": "Resene_Top_Gear.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B68-057-214",
+      "name": "Toto",
+      "swatchName": "Resene_Toto.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "WD036",
+      "name": "Touch Wood",
+      "swatchName": "Resene_Touch_Wood.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N72-001-160",
+      "name": "Transmission",
+      "swatchName": "Resene_Transmission.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y69-029-083",
+      "name": "Triple Akaroa",
+      "swatchName": "Resene_Triple_Akaroa.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR69-055-076",
+      "name": "Triple Canterbury Clay",
+      "swatchName": "Resene_Triple_Canterbury_Clay.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR53-044-077",
+      "name": "Triple Colins Wicket",
+      "swatchName": "Resene_Triple_Colins_Wicket.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N79-002-103",
+      "name": "Triple Concrete",
+      "swatchName": "Resene_Triple_Concrete.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y51-013-084",
+      "name": "Triple Friar Grey",
+      "swatchName": "Resene_Triple_Friar_Grey.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y60-028-085",
+      "name": "Triple Grey Olive",
+      "swatchName": "Resene_Triple_Grey_Olive.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y59-042-089",
+      "name": "Triple Hillary",
+      "swatchName": "Resene_Triple_Hillary.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y75-027-079",
+      "name": "Triple Parchment",
+      "swatchName": "Resene_Triple_Parchment.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR65-036-076",
+      "name": "Triple Pavlova",
+      "swatchName": "Resene_Triple_Pavlova.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR68-032-078",
+      "name": "Triple Sisal",
+      "swatchName": "Resene_Triple_Sisal.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR72-022-079",
+      "name": "Triple Tea",
+      "swatchName": "Resene_Triple_Tea.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R31-059-022",
+      "name": "Trouble",
+      "swatchName": "Resene_Trouble.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N45-008-228",
+      "name": "Trout",
+      "swatchName": "Resene_Trout.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y78-011-083",
+      "name": "Truffle",
+      "swatchName": "Resene_Truffle.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N39-008-260",
+      "name": "Tuna",
+      "swatchName": "Resene_Tuna.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N45-003-047",
+      "name": "Tundora",
+      "swatchName": "Resene_Tundora.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y68-078-073",
+      "name": "Twine",
+      "swatchName": "Resene_Twine.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y63-050-084",
+      "name": "Twister",
+      "swatchName": "Resene_Twister.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N27-001-174",
+      "name": "Uhi",
+      "swatchName": "Resene_Uhi.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V30-022-316",
+      "name": "Valentino",
+      "swatchName": "Resene_Valentino.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G43-064-103",
+      "name": "Verdun Green",
+      "swatchName": "Resene_Verdun_Green.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G49-012-146",
+      "name": "Viktor",
+      "swatchName": "Resene_Viktor.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V72-022-292",
+      "name": "Vision",
+      "swatchName": "Resene_Vision.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V37-046-286",
+      "name": "Vortex",
+      "swatchName": "Resene_Vortex.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B41-039-249",
+      "name": "Wanaka",
+      "swatchName": "Resene_Wanaka.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B58-020-246",
+      "name": "Weathered Blue",
+      "swatchName": "Resene_Weathered_Blue.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N86-007-080",
+      "name": "Westar",
+      "swatchName": "Resene_Westar.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N89-007-087",
+      "name": "White Pointer",
+      "swatchName": "Resene_White_Pointer.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "N88-002-237",
+      "name": "White Thunder",
+      "swatchName": "Resene_White_Thunder.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V35-040-293",
+      "name": "Wicked",
+      "swatchName": "Resene_Wicked.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "O82-032-061",
+      "name": "Wildflower",
+      "swatchName": "Resene_Wildflower.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "B34-045-255",
+      "name": "Wishing Well",
+      "swatchName": "Resene_Wishing_Well.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y38-025-087",
+      "name": "Woodrush",
+      "swatchName": "Resene_Woodrush.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "G62-025-136",
+      "name": "Xanadu",
+      "swatchName": "Resene_Xanadu.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "V44-009-336",
+      "name": "Yasna",
+      "swatchName": "Resene_Yasna.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y80-052-088",
+      "name": "Yuma",
+      "swatchName": "Resene_Yuma.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "BR50-014-019",
+      "name": "Zambezi",
+      "swatchName": "Resene_Zambezi.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "R45-073-025",
+      "name": "Zinger",
+      "swatchName": "Resene_Zinger.jpg",
+      "iscool": "true"
+    },
+    {
+      "code": "Y59-114-080",
+      "name": "Zion",
+      "swatchName": "Resene_Zion.jpg",
+      "iscool": "true"
+    }
+  ]
+}
