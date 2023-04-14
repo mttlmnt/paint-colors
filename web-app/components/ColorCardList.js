@@ -1,5 +1,5 @@
 
-import ColorCard from './ColorCard';
+import ColorCardDraggable from './ColorCardDraggable';
 
 export default function ColorCardList(props) {
   return (
@@ -7,7 +7,7 @@ export default function ColorCardList(props) {
      {
        props.colorCatalog.map((item, i) =>
         <div className='flex-none m-1' key={i}>
-          <ColorCard key={i} colorInfo={item} />
+          <ColorCardDraggable key={i} colorInfo={item} />
         </div>
        )
      }
