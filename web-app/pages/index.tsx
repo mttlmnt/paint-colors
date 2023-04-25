@@ -1,6 +1,6 @@
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import colorCatalog from '../../scraper/cool_colors.json';
+import colorCatalog from '../../scraper/colors.json';
 import ColorCardList from '../components/ColorCardList';
 import Stage from '../components/Stage';
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Swatch from './Swatch';
 
 export default function ColorCard(props) {
   return (
@@ -9,24 +10,7 @@ export default function ColorCard(props) {
         </h2>
         <span className='text-sm font-extralight'>{ props.colorInfo.code }</span>
       </div>
-      <div className='w-32 h-32 relative'>
-        <Image
-          className='border rounded'
-          src={ swatchURL(props.colorInfo.swatchName) }
-          alt='{ props.colorInfo.name }'
-          fill
-          sizes='max-width: 128px'
-          draggable='false'
-        />
-      </div>
+      <Swatch colorRGB={ props.colorInfo.rgb }/>
     </div>
   )
-}
-
-function swatchTestPotURL(swatchName) {
-  return `https://www.resene.co.nz/swatches/jpegs/testpotpics/preview/${swatchName}`
-}
-
-function swatchURL(swatchName) {
-  return `https://www.resene.co.nz/swatches/jpegs/${swatchName}`
 }
