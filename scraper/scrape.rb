@@ -29,12 +29,23 @@ end
 
 def extract_items_from_index_page(file_path)
   doc = Nokogiri::HTML(File.read(file_path))
-  trs = doc.xpath("//table//table//tr")
-  codes_tr = trs[3]
-  codes = codes_tr.xpath("td").children.map { |c| c.text.strip }
-  links_tr = trs[6]
-  urls = links_tr.xpath("td//a").map { |a| a.attribute("href").text }.select { |href| href.start_with? "preview" }
-  codes.zip(urls).map { |item| IndexPageInfo.new(item[0], item[1])}
+  trs = doc.xpath("//table/tr/td/table//tr")
+  puts file_path
+  items = (1..6).collect do |i|
+    codes_tr = trs[3]
+    if codes_tr
+      codes = codes_tr.xpath("td").children.map { |c| c.text.strip }
+      links_tr = trs[6]
+      urls = links_tr.xpath("td//a").map { |a| a.attribute("href").text }.select { |href| href.start_with? "preview" }
+      8.times { trs.shift }
+      codes.zip(urls).map do |code, url|
+        if code.length > 0
+          IndexPageInfo.new(code, url)
+        end
+      end
+    end
+  end
+  items.flatten.compact
 end
 
 def extract_index_page_items()
@@ -117,10 +128,20 @@ OptionParser.new do |opts|
   opts.on("--download-index-pages") do
     download_index_pages()
   end
+
+  opts.on("--extract_items_from_index_page PATH") do |file_path|
+    pp extract_items_from_index_page(file_path)
+  end
+
   opts.on("--download-info-pages") do
     download_info_pages()
   end
+
   opts.on("--process-info-pages") do
     process_info_pages()
+  end
+
+  opts.on("--process-info-page PATH") do |file_path|
+    pp JSON.pretty_generate(extract_info_from_page(file_path))
   end
 end.parse!
