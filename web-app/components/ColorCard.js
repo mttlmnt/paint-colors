@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Swatch from './Swatch';
 
 export default function ColorCard(props) {

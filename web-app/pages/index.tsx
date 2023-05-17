@@ -1,8 +1,8 @@
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import colorCatalog from '../../scraper/colors.json';
-import ColorCardList from '../components/ColorCardList';
-import Stage from '../components/Stage';
+import ColorCardList from '@/components/ColorCardList';
+import Stage from '@/components/Stage';
 
 export default function Home(props) {
   return (
