@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import ColorCardList from '@/components/ColorCardList';
@@ -8,14 +8,18 @@ import { Header } from '@/components/Header';
 import { FilterOptions } from "@/FilterOptions";
 
 export default function App() {
-  const [colorStore, _] = useState<ColorStore>(new ColorStore())
-  const [filterOptions, setFilterOptions] = useState<FilterOptions>({} as FilterOptions);
+  const [colorStore] = useState<ColorStore>(new ColorStore())
+  const [filterOptions, setFilterOptions] = useState<FilterOptions>({ colorCategory: 'all' });
+
+  const filteredColors = useMemo(() => {
+    return colorStore.colors(filterOptions);
+  }, [colorStore, filterOptions]);
 
   return (
     <DndProvider backend={ HTML5Backend }>
       <Header onFilterOptionsChanged={ setFilterOptions }></Header>
       <div className='flex flex-col h-screen'>
-        <ColorCardList colors={ colorStore.colors(filterOptions) } />
+        <ColorCardList colors={ filteredColors } />
         <Stage/>
       </div>
     </DndProvider>
