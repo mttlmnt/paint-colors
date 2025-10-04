@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <Header onFilterOptionsChanged={setFilterOptions}></Header>
+      <Header onFilterOptionsChanged={setFilterOptions} colorCount={filteredColors.length}></Header>
       <div ref={containerRef} className="flex flex-col lg:flex-row h-screen overflow-hidden">
         <div className="flex-1 overflow-auto">
           <ColorCardList colors={filteredColors} />

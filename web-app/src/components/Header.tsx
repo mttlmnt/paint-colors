@@ -4,6 +4,7 @@ import { FilterOptions, ColorCategory } from '@/FilterOptions'
 
 type HeaderProps = {
   onFilterOptionsChanged: (filterOptions: FilterOptions) => void
+  colorCount: number
 }
 
 const COLOR_CATEGORIES: {
@@ -29,7 +30,7 @@ const COLOR_CATEGORIES: {
   { value: 'white', label: 'Whites', color: 'bg-white border border-gray-300' },
 ]
 
-function Header({ onFilterOptionsChanged }: HeaderProps) {
+function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({
     colorCategories: [],
   })
@@ -74,6 +75,9 @@ function Header({ onFilterOptionsChanged }: HeaderProps) {
             onChange={(e) => updateFilters({ searchText: e.target.value })}
             className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
+          <span className="text-sm text-gray-600 whitespace-nowrap">
+            {colorCount} {colorCount === 1 ? 'color' : 'colors'}
+          </span>
         </div>
 
         {/* Color Category Filters */}
