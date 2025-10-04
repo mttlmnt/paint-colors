@@ -1,6 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { FilterOptions, ColorCategory, SortBy, SortOrder } from '@/FilterOptions'
+import {
+  FilterOptions,
+  ColorCategory,
+  SortBy,
+  SortOrder,
+} from '@/FilterOptions'
 
 type HeaderProps = {
   onFilterOptionsChanged: (filterOptions: FilterOptions) => void
@@ -65,10 +70,12 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
 
   return (
     <div className="p-4 bg-gray-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto space-y-4">
+      <div className="max-w-4xl mx-auto space-y-4">
         {/* Search and Filters Section */}
         <div className="flex gap-4">
-          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">Search</div>
+          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
+            Search
+          </div>
           <div className="flex-1 space-y-4">
             <div className="flex items-center gap-2">
               <input
@@ -78,9 +85,6 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
                 onChange={(e) => updateFilters({ searchText: e.target.value })}
                 className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <span className="text-sm text-gray-600 whitespace-nowrap">
-                {colorCount} {colorCount === 1 ? 'color' : 'colors'}
-              </span>
             </div>
 
             {/* Color Category Filters */}
@@ -103,7 +107,9 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
               {/* Cool colors Checkbox */}
               <button
                 onClick={() =>
-                  updateFilters({ coolColorsOnly: !filterOptions.coolColorsOnly })
+                  updateFilters({
+                    coolColorsOnly: !filterOptions.coolColorsOnly,
+                  })
                 }
                 className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                   filterOptions.coolColorsOnly
@@ -120,48 +126,59 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
 
         {/* Sort Section */}
         <div className="flex gap-4">
-          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">Sort</div>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => {
-                if (filterOptions.sortBy === 'name') {
-                  if (filterOptions.sortOrder === 'asc') {
-                    updateFilters({ sortOrder: 'desc' })
+          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
+            Sort
+          </div>
+          <div className="flex-1 flex items-center justify-between gap-2">
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => {
+                  if (filterOptions.sortBy === 'name') {
+                    if (filterOptions.sortOrder === 'asc') {
+                      updateFilters({ sortOrder: 'desc' })
+                    } else {
+                      updateFilters({ sortBy: undefined, sortOrder: undefined })
+                    }
                   } else {
-                    updateFilters({ sortBy: undefined, sortOrder: undefined })
+                    updateFilters({ sortBy: 'name', sortOrder: 'asc' })
                   }
-                } else {
-                  updateFilters({ sortBy: 'name', sortOrder: 'asc' })
-                }
-              }}
-              className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
-                filterOptions.sortBy === 'name'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-              }`}
-            >
-              Name {filterOptions.sortBy === 'name' && (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
-            </button>
-            <button
-              onClick={() => {
-                if (filterOptions.sortBy === 'lrv') {
-                  if (filterOptions.sortOrder === 'asc') {
-                    updateFilters({ sortOrder: 'desc' })
+                }}
+                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
+                  filterOptions.sortBy === 'name'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+                }`}
+              >
+                Name{' '}
+                {filterOptions.sortBy === 'name' &&
+                  (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
+              </button>
+              <button
+                onClick={() => {
+                  if (filterOptions.sortBy === 'lrv') {
+                    if (filterOptions.sortOrder === 'asc') {
+                      updateFilters({ sortOrder: 'desc' })
+                    } else {
+                      updateFilters({ sortBy: undefined, sortOrder: undefined })
+                    }
                   } else {
-                    updateFilters({ sortBy: undefined, sortOrder: undefined })
+                    updateFilters({ sortBy: 'lrv', sortOrder: 'asc' })
                   }
-                } else {
-                  updateFilters({ sortBy: 'lrv', sortOrder: 'asc' })
-                }
-              }}
-              className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
-                filterOptions.sortBy === 'lrv'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-              }`}
-            >
-              Lightness {filterOptions.sortBy === 'lrv' && (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
-            </button>
+                }}
+                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
+                  filterOptions.sortBy === 'lrv'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+                }`}
+              >
+                Lightness{' '}
+                {filterOptions.sortBy === 'lrv' &&
+                  (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
+              </button>
+            </div>
+            <span className="text-sm text-gray-600 whitespace-nowrap">
+              {colorCount} {colorCount === 1 ? 'color' : 'colors'}
+            </span>
           </div>
         </div>
       </div>
