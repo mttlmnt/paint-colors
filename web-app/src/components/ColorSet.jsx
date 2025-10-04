@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
-import { useDrop } from "react-dnd";
-import ColorCardDraggable from "./ColorCardDraggable";
-import PlusIcon from "@heroicons/react/24/outline/PlusIcon";
-import SwatchIcon from "@heroicons/react/24/outline/SwatchIcon";
-import TrashIcon from "@heroicons/react/24/outline/TrashIcon";
-import PencilIcon from "@heroicons/react/24/outline/PencilIcon";
+import { useState, useCallback } from 'react'
+import { useDrop } from 'react-dnd'
+import ColorCardDraggable from './ColorCardDraggable'
+import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
+import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
+import TrashIcon from '@heroicons/react/24/outline/TrashIcon'
+import PencilIcon from '@heroicons/react/24/outline/PencilIcon'
 
 export default function ColorSet({
   id,
@@ -15,42 +15,42 @@ export default function ColorSet({
   onRename,
   canDelete,
 }) {
-  const [isEditingName, setIsEditingName] = useState(false);
-  const [editedName, setEditedName] = useState(name);
+  const [isEditingName, setIsEditingName] = useState(false)
+  const [editedName, setEditedName] = useState(name)
 
   const addColorSlot = useCallback(() => {
-    onUpdateColors([...colors, null]);
-  }, [colors, onUpdateColors]);
+    onUpdateColors([...colors, null])
+  }, [colors, onUpdateColors])
 
   const removeColorSlot = useCallback(
     (index) => {
-      onUpdateColors(colors.filter((_, i) => i !== index));
+      onUpdateColors(colors.filter((_, i) => i !== index))
     },
-    [colors, onUpdateColors],
-  );
+    [colors, onUpdateColors]
+  )
 
   const updateColor = useCallback(
     (index, colorInfo) => {
       // If colors array is empty, initialize with 3 slots
       const workingColors =
-        colors.length === 0 ? [null, null, null] : [...colors];
-      workingColors[index] = colorInfo;
-      onUpdateColors(workingColors);
+        colors.length === 0 ? [null, null, null] : [...colors]
+      workingColors[index] = colorInfo
+      onUpdateColors(workingColors)
     },
-    [colors, onUpdateColors, id],
-  );
+    [colors, onUpdateColors, id]
+  )
 
   const handleNameSave = () => {
     if (editedName.trim()) {
-      onRename(editedName.trim());
+      onRename(editedName.trim())
     } else {
-      setEditedName(name);
+      setEditedName(name)
     }
-    setIsEditingName(false);
-  };
+    setIsEditingName(false)
+  }
 
   // Start with 3 empty slots if no colors yet
-  const displayColors = colors.length === 0 ? [null, null, null] : colors;
+  const displayColors = colors.length === 0 ? [null, null, null] : colors
 
   return (
     <div className="flex-none bg-white rounded-lg shadow-md border border-gray-200 p-4 min-w-[300px]">
@@ -62,7 +62,7 @@ export default function ColorSet({
             value={editedName}
             onChange={(e) => setEditedName(e.target.value)}
             onBlur={handleNameSave}
-            onKeyDown={(e) => e.key === "Enter" && handleNameSave()}
+            onKeyDown={(e) => e.key === 'Enter' && handleNameSave()}
             className="text-sm font-semibold text-gray-800 border border-blue-400 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             autoFocus
           />
@@ -112,23 +112,23 @@ export default function ColorSet({
         <span className="text-sm font-medium">Add Color</span>
       </button>
     </div>
-  );
+  )
 }
 
 function ColorSlot({ colorInfo, onDrop, onRemove }) {
   const [{ canDrop, isOver }, drop] = useDrop(
     () => ({
-      accept: "color-card",
+      accept: 'color-card',
       drop: (item, monitor) => {
-        onDrop(item);
+        onDrop(item)
       },
       collect: (monitor) => ({
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
       }),
     }),
-    [onDrop],
-  );
+    [onDrop]
+  )
 
   return (
     <div className="relative group">
@@ -149,14 +149,14 @@ function ColorSlot({ colorInfo, onDrop, onRemove }) {
         </button>
       )}
     </div>
-  );
+  )
 }
 
 function Placeholder({ isOver }) {
   return (
     <div
       className={`p-4 flex justify-center border rounded-md transition-all ${
-        isOver ? "border-blue-400 bg-blue-50" : "border-gray-300 bg-white"
+        isOver ? 'border-blue-400 bg-blue-50' : 'border-gray-300 bg-white'
       }`}
     >
       <div className="w-32 h-32 flex items-center justify-center">
@@ -167,5 +167,5 @@ function Placeholder({ isOver }) {
         )}
       </div>
     </div>
-  );
+  )
 }

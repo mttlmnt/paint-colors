@@ -1,4 +1,4 @@
-import Swatch from "./Swatch";
+import Swatch from './Swatch'
 
 export default function ColorCard(props) {
   return (
@@ -13,5 +13,5 @@ export default function ColorCard(props) {
       </div>
       <Swatch colorRGB={props.colorInfo.rgb} />
     </div>
-  );
+  )
 }

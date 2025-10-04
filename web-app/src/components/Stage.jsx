@@ -1,15 +1,15 @@
-import { useState, useCallback } from "react";
-import ColorSet from "./ColorSet";
-import PlusIcon from "@heroicons/react/24/outline/PlusIcon";
+import { useState, useCallback } from 'react'
+import ColorSet from './ColorSet'
+import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
 
 export default function Stage(props) {
   const [colorSets, setColorSets] = useState([
-    { id: 1, name: "Color Set 1", colors: [] },
-  ]);
+    { id: 1, name: 'Color Set 1', colors: [] },
+  ])
 
   const addColorSet = () => {
     setColorSets((prevSets) => {
-      const newId = Math.max(...prevSets.map((s) => s.id), 0) + 1;
+      const newId = Math.max(...prevSets.map((s) => s.id), 0) + 1
       return [
         ...prevSets,
         {
@@ -17,30 +17,30 @@ export default function Stage(props) {
           name: `Color Set ${newId}`,
           colors: [],
         },
-      ];
-    });
-  };
+      ]
+    })
+  }
 
   const deleteColorSet = useCallback((id) => {
     setColorSets((prevSets) => {
       if (prevSets.length > 1) {
-        return prevSets.filter((set) => set.id !== id);
+        return prevSets.filter((set) => set.id !== id)
       }
-      return prevSets;
-    });
-  }, []);
+      return prevSets
+    })
+  }, [])
 
   const updateColorSet = useCallback((id, colors) => {
     setColorSets((prevSets) =>
-      prevSets.map((set) => (set.id === id ? { ...set, colors } : set)),
-    );
-  }, []);
+      prevSets.map((set) => (set.id === id ? { ...set, colors } : set))
+    )
+  }, [])
 
   const renameColorSet = useCallback((id, newName) => {
     setColorSets((prevSets) =>
-      prevSets.map((set) => (set.id === id ? { ...set, name: newName } : set)),
-    );
-  }, []);
+      prevSets.map((set) => (set.id === id ? { ...set, name: newName } : set))
+    )
+  }, [])
 
   return (
     <div className="flex-none bg-gray-100 border-t border-gray-300">
@@ -77,5 +77,5 @@ export default function Stage(props) {
         </div>
       </div>
     </div>
-  );
+  )
 }

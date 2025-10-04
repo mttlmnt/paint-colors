@@ -1,38 +1,41 @@
-import colorData from '../../scraper/colors.json';
-import { FilterOptions } from '@/FilterOptions';
-import { categorizeColor } from '@/utils/colorCategories';
+import colorData from '../../scraper/colors.json'
+import { FilterOptions } from '@/FilterOptions'
+import { categorizeColor } from '@/utils/colorCategories'
 
 class ColorStore {
-  private colorList = colorData.colors;
+  private colorList = colorData.colors
 
   public colors(filterOptions: FilterOptions) {
     return this.colorList.filter((item) => {
       // Filter by cool colors
       if (filterOptions.coolColorsOnly && !item.is_cool) {
-        return false;
+        return false
       }
 
       // Filter by search text
       if (filterOptions.searchText) {
-        const searchLower = filterOptions.searchText.toLowerCase();
-        const matchesName = item.name.toLowerCase().includes(searchLower);
-        const matchesCode = item.code.toLowerCase().includes(searchLower);
+        const searchLower = filterOptions.searchText.toLowerCase()
+        const matchesName = item.name.toLowerCase().includes(searchLower)
+        const matchesCode = item.code.toLowerCase().includes(searchLower)
         if (!matchesName && !matchesCode) {
-          return false;
+          return false
         }
       }
 
       // Filter by color category
-      if (filterOptions.colorCategory && filterOptions.colorCategory !== 'all') {
-        const colorCategory = categorizeColor(item.rgb);
+      if (
+        filterOptions.colorCategory &&
+        filterOptions.colorCategory !== 'all'
+      ) {
+        const colorCategory = categorizeColor(item.rgb)
         if (colorCategory !== filterOptions.colorCategory) {
-          return false;
+          return false
         }
       }
 
-      return true;
-    });
+      return true
+    })
   }
 }
 
-export { ColorStore };
+export { ColorStore }
