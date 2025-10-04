@@ -1,4 +1,4 @@
-import colorData from '../scraper/colors.json';
+import colorData from '../../scraper/colors.json';
 import { FilterOptions } from '@/FilterOptions';
 
 class ColorStore {

@@ -7,7 +7,7 @@ import Stage from '@/components/Stage';
 import { Header } from '@/components/Header';
 import { FilterOptions } from "@/FilterOptions";
 
-export default function Home() {
+export default function App() {
   const [colorStore, _] = useState<ColorStore>(new ColorStore())
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({} as FilterOptions);
 
