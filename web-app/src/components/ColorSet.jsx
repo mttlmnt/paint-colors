@@ -106,7 +106,7 @@ export default function ColorSet({
       {/* Add Slot Button */}
       <button
         onClick={addColorSlot}
-        className="w-full mt-2 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
+        className="w-full mt-2 py-2 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
       >
         <PlusIcon className="h-4 w-4" />
         <span className="text-sm font-medium">Add Color</span>
@@ -132,20 +132,9 @@ function ColorSlot({ colorInfo, onDrop, onRemove }) {
 
   return (
     <div className="relative group">
-      <div
-        ref={drop}
-        className={`border-2 rounded-lg transition-all ${
-          isOver
-            ? "border-blue-400 bg-blue-50"
-            : canDrop
-              ? "border-gray-300 bg-white"
-              : "border-gray-300 bg-white"
-        }`}
-      >
+      <div ref={drop}>
         {colorInfo ? (
-          <div className="p-1">
-            <ColorCardDraggable colorInfo={colorInfo} />
-          </div>
+          <ColorCardDraggable colorInfo={colorInfo} />
         ) : (
           <Placeholder isOver={isOver} />
         )}
@@ -165,12 +154,18 @@ function ColorSlot({ colorInfo, onDrop, onRemove }) {
 
 function Placeholder({ isOver }) {
   return (
-    <div className="flex items-center justify-center h-24 m-2">
-      {isOver ? (
-        <SwatchIcon className="h-12 w-12 text-blue-400" />
-      ) : (
-        <PlusIcon className="h-12 w-12 text-gray-300" />
-      )}
+    <div
+      className={`p-4 flex justify-center border rounded-md transition-all ${
+        isOver ? "border-blue-400 bg-blue-50" : "border-gray-300 bg-white"
+      }`}
+    >
+      <div className="w-32 h-32 flex items-center justify-center">
+        {isOver ? (
+          <SwatchIcon className="h-16 w-16 text-blue-400" />
+        ) : (
+          <PlusIcon className="h-16 w-16 text-gray-300" />
+        )}
+      </div>
     </div>
   );
 }
