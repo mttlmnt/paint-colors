@@ -1,6 +1,6 @@
-# Resene Paint Colors
+# Paint Colors
 
-A React application for browsing and organizing Resene paint colors, built with [Vite](https://vite.dev/) and [React](https://react.dev/).
+A React application for browsing and organizing paint colors, built with [Vite](https://vite.dev/) and [React](https://react.dev/).
 
 ## Getting Started
 
