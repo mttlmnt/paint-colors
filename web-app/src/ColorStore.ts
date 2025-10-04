@@ -22,13 +22,13 @@ class ColorStore {
         }
       }
 
-      // Filter by color category
+      // Filter by color categories
       if (
-        filterOptions.colorCategory &&
-        filterOptions.colorCategory !== 'all'
+        filterOptions.colorCategories &&
+        filterOptions.colorCategories.length > 0
       ) {
         const colorCategory = categorizeColor(item.rgb)
-        if (colorCategory !== filterOptions.colorCategory) {
+        if (!filterOptions.colorCategories.includes(colorCategory)) {
           return false
         }
       }

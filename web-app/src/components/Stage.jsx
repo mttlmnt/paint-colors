@@ -47,7 +47,7 @@ export default function Stage(props) {
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-lg font-semibold text-gray-800">Colour Sets</h2>
+            <h2 className="text-lg font-semibold text-gray-800">Color Sets</h2>
             <p className="text-sm text-gray-600">
               Drag colors here to create combinations
             </p>

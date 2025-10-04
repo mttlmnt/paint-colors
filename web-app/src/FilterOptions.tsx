@@ -14,6 +14,6 @@ export type ColorCategory =
 
 export interface FilterOptions {
   searchText?: string
-  colorCategory?: ColorCategory
+  colorCategories?: ColorCategory[]
   coolColorsOnly?: boolean
 }

@@ -31,13 +31,35 @@ const COLOR_CATEGORIES: {
 
 function Header({ onFilterOptionsChanged }: HeaderProps) {
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({
-    colorCategory: 'all',
+    colorCategories: [],
   })
 
   const updateFilters = (updates: Partial<FilterOptions>) => {
     const newFilterOptions = { ...filterOptions, ...updates }
     setFilterOptions(newFilterOptions)
     onFilterOptionsChanged(newFilterOptions)
+  }
+
+  const toggleCategory = (categoryValue: ColorCategory) => {
+    if (categoryValue === 'all') {
+      updateFilters({ colorCategories: [] })
+    } else {
+      const currentCategories = filterOptions.colorCategories || []
+      const newCategories = currentCategories.includes(categoryValue)
+        ? currentCategories.filter((c) => c !== categoryValue)
+        : [...currentCategories, categoryValue]
+      updateFilters({ colorCategories: newCategories })
+    }
+  }
+
+  const isCategoryActive = (categoryValue: ColorCategory) => {
+    if (categoryValue === 'all') {
+      return (
+        !filterOptions.colorCategories ||
+        filterOptions.colorCategories.length === 0
+      )
+    }
+    return filterOptions.colorCategories?.includes(categoryValue) || false
   }
 
   return (
@@ -59,9 +81,9 @@ function Header({ onFilterOptionsChanged }: HeaderProps) {
           {COLOR_CATEGORIES.map((category) => (
             <button
               key={category.value}
-              onClick={() => updateFilters({ colorCategory: category.value })}
+              onClick={() => toggleCategory(category.value)}
               className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
-                filterOptions.colorCategory === category.value
+                isCategoryActive(category.value)
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
               }`}

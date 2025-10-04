@@ -10,7 +10,7 @@ import { FilterOptions } from '@/FilterOptions'
 export default function App() {
   const [colorStore] = useState<ColorStore>(new ColorStore())
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({
-    colorCategory: 'all',
+    colorCategories: [],
   })
 
   const filteredColors = useMemo(() => {
