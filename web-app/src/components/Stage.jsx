@@ -61,7 +61,7 @@ export default function Stage(props) {
           </button>
         </div>
 
-        <div className="flex flex-row gap-4 overflow-x-auto pb-4">
+        <div className="flex flex-wrap gap-4 pb-4">
           {colorSets.map((set) => (
             <ColorSet
               key={set.id}

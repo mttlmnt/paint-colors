@@ -13,6 +13,8 @@ export default function App() {
     colorCategories: [],
   })
   const [stageWidth, setStageWidth] = useState(384) // 96 * 4 (w-96 in pixels)
+  const [stageHeight, setStageHeight] = useState(window.innerHeight * 0.4)
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024)
   const containerRef = useRef<HTMLDivElement>(null)
   const isResizingRef = useRef(false)
 
@@ -20,7 +22,15 @@ export default function App() {
     return colorStore.colors(filterOptions)
   }, [colorStore, filterOptions])
 
-  const startResizing = (e: React.MouseEvent) => {
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const startResizingHorizontal = (e: React.MouseEvent) => {
     e.preventDefault()
     isResizingRef.current = true
     document.body.style.cursor = 'col-resize'
@@ -46,24 +56,55 @@ export default function App() {
     document.addEventListener('mouseup', handleMouseUp)
   }
 
+  const startResizingVertical = (e: React.MouseEvent) => {
+    e.preventDefault()
+    isResizingRef.current = true
+    document.body.style.cursor = 'row-resize'
+    document.body.style.userSelect = 'none'
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isResizingRef.current || !containerRef.current) return
+
+      const containerRect = containerRef.current.getBoundingClientRect()
+      const newHeight = containerRect.bottom - e.clientY
+      setStageHeight(Math.max(150, Math.min(newHeight, containerRect.height - 150)))
+    }
+
+    const handleMouseUp = () => {
+      isResizingRef.current = false
+      document.body.style.cursor = ''
+      document.body.style.userSelect = ''
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseup', handleMouseUp)
+    }
+
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
+  }
+
   return (
     <DndProvider backend={HTML5Backend}>
-      <Header onFilterOptionsChanged={setFilterOptions} colorCount={filteredColors.length}></Header>
       <div ref={containerRef} className="flex flex-col lg:flex-row h-screen overflow-hidden">
-        <div className="flex-1 overflow-auto">
-          <ColorCardList colors={filteredColors} />
+        <div className="flex-1 flex flex-col overflow-hidden min-h-0">
+          <Header onFilterOptionsChanged={setFilterOptions} colorCount={filteredColors.length}></Header>
+          <div className="flex-1 overflow-auto">
+            <ColorCardList colors={filteredColors} />
+          </div>
         </div>
         <div
-          className="hidden lg:block border-l border-gray-200 overflow-auto relative"
-          style={{ width: stageWidth }}
+          className="border-t lg:border-t-0 lg:border-l border-gray-200 overflow-auto relative"
+          style={{ width: isLargeScreen ? stageWidth : '100%', height: isLargeScreen ? 'auto' : stageHeight }}
         >
+          {/* Horizontal resize handle (large screens) */}
           <div
-            className="absolute left-0 top-0 bottom-0 w-1 cursor-col-resize hover:bg-blue-400 transition-colors"
-            onMouseDown={startResizing}
+            className="hidden lg:block absolute left-0 top-0 bottom-0 w-1 cursor-col-resize hover:bg-blue-400 transition-colors z-10"
+            onMouseDown={startResizingHorizontal}
           />
-          <Stage />
-        </div>
-        <div className="lg:hidden border-t border-gray-200 overflow-auto">
+          {/* Vertical resize handle (narrow screens) */}
+          <div
+            className="lg:hidden absolute left-0 right-0 top-0 h-1 cursor-row-resize hover:bg-blue-400 transition-colors z-10"
+            onMouseDown={startResizingVertical}
+          />
           <Stage />
         </div>
       </div>
