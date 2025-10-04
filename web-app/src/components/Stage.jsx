@@ -1,11 +1,18 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import ColorSet from './ColorSet'
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
+import { loadFromLocalStorage, saveToLocalStorage } from '@/utils/localStorage'
+
+const STORAGE_KEY = 'paint-colors-sets'
 
 export default function Stage(props) {
-  const [colorSets, setColorSets] = useState([
-    { id: 1, name: 'Color Set 1', colors: [] },
-  ])
+  const [colorSets, setColorSets] = useState(() => {
+    return loadFromLocalStorage(STORAGE_KEY, [{ id: 1, name: 'Color Set 1', colors: [] }])
+  })
+
+  useEffect(() => {
+    saveToLocalStorage(STORAGE_KEY, colorSets)
+  }, [colorSets])
 
   const addColorSet = () => {
     setColorSets((prevSets) => {
