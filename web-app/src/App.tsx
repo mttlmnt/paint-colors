@@ -6,6 +6,7 @@ import { ColorStore } from '@/ColorStore'
 import Stage from '@/components/Stage'
 import { Header } from '@/components/Header'
 import { FilterOptions } from '@/FilterOptions'
+import { rgbToHsl } from '@/utils/colorCategories'
 
 export default function App() {
   const [colorStore] = useState<ColorStore>(new ColorStore())
@@ -19,7 +20,27 @@ export default function App() {
   const isResizingRef = useRef(false)
 
   const filteredColors = useMemo(() => {
-    return colorStore.colors(filterOptions)
+    let colors = colorStore.colors(filterOptions)
+
+    // Apply sorting
+    if (filterOptions.sortBy) {
+      colors = [...colors].sort((a, b) => {
+        let comparison = 0
+
+        if (filterOptions.sortBy === 'name') {
+          comparison = a.name.localeCompare(b.name)
+        } else if (filterOptions.sortBy === 'lrv') {
+          // Calculate lightness from RGB for more reliable sorting
+          const lightnessA = rgbToHsl(a.rgb).l
+          const lightnessB = rgbToHsl(b.rgb).l
+          comparison = lightnessA - lightnessB
+        }
+
+        return filterOptions.sortOrder === 'desc' ? -comparison : comparison
+      })
+    }
+
+    return colors
   }, [colorStore, filterOptions])
 
   useEffect(() => {

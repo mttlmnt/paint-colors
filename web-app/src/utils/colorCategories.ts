@@ -9,7 +9,7 @@ interface RGB {
 /**
  * Convert RGB to HSL to determine hue-based color category
  */
-function rgbToHsl(rgb: RGB): { h: number; s: number; l: number } {
+export function rgbToHsl(rgb: RGB): { h: number; s: number; l: number } {
   const r = rgb.r / 255
   const g = rgb.g / 255
   const b = rgb.b / 255
