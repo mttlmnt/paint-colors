@@ -20,9 +20,13 @@ export default function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <Header onFilterOptionsChanged={setFilterOptions}></Header>
-      <div className="flex flex-col h-screen">
-        <ColorCardList colors={filteredColors} />
-        <Stage />
+      <div className="flex flex-col lg:flex-row h-screen overflow-hidden">
+        <div className="flex-1 overflow-auto">
+          <ColorCardList colors={filteredColors} />
+        </div>
+        <div className="lg:w-96 border-t lg:border-t-0 lg:border-l border-gray-200 overflow-auto">
+          <Stage />
+        </div>
       </div>
     </DndProvider>
   )
