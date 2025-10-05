@@ -1,6 +1,6 @@
 # Paint Colors
 
-A React application for browsing and organizing paint colors, built with [Vite](https://vite.dev/) and [React](https://react.dev/).
+An application for browsing and organizing paint colors.
 
 ## Getting Started
 
