@@ -35,6 +35,112 @@ const COLOR_CATEGORIES: {
   { value: 'white', label: 'Whites', color: 'bg-white border border-gray-300' },
 ]
 
+const SectionLabel = ({ children }: { children: React.ReactNode }) => (
+  <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
+    {children}
+  </div>
+)
+
+const SearchSection = ({
+  searchText,
+  onSearchChange,
+}: {
+  searchText: string
+  onSearchChange: (text: string) => void
+}) => (
+  <div className="flex items-center gap-2">
+    <input
+      type="text"
+      placeholder="by name or code..."
+      value={searchText}
+      onChange={(e) => onSearchChange(e.target.value)}
+      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+)
+
+const BrowseSection = ({
+  filterOptions,
+  toggleCategory,
+  isCategoryActive,
+  onToggleCool,
+}: {
+  filterOptions: FilterOptions
+  toggleCategory: (categoryValue: ColorCategory) => void
+  isCategoryActive: (categoryValue: ColorCategory) => boolean
+  onToggleCool: () => void
+}) => (
+  <div className="flex flex-wrap gap-2">
+    {COLOR_CATEGORIES.map((category) => (
+      <button
+        key={category.value}
+        onClick={() => toggleCategory(category.value)}
+        className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+          isCategoryActive(category.value)
+            ? 'bg-blue-600 text-white shadow-md'
+            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+        }`}
+      >
+        <span className={`w-4 h-4 rounded-full ${category.color}`} />
+        {category.label}
+      </button>
+    ))}
+    <button
+      onClick={onToggleCool}
+      className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+        filterOptions.coolColorsOnly
+          ? 'bg-blue-600 text-white shadow-md'
+          : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+      }`}
+    >
+      <span>🌤️</span>
+      Cool
+    </button>
+  </div>
+)
+
+const SortSection = ({
+  filterOptions,
+  onToggleSort,
+  colorCount,
+}: {
+  filterOptions: FilterOptions
+  onToggleSort: (sortBy: SortBy) => void
+  colorCount: number
+}) => (
+  <div className="flex-1 flex items-center justify-between gap-2">
+    <div className="flex flex-wrap gap-2">
+      <button
+        onClick={() => onToggleSort('name')}
+        className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
+          filterOptions.sortBy === 'name'
+            ? 'bg-blue-600 text-white shadow-md'
+            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+        }`}
+      >
+        Name{' '}
+        {filterOptions.sortBy === 'name' &&
+          (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
+      </button>
+      <button
+        onClick={() => onToggleSort('lrv')}
+        className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
+          filterOptions.sortBy === 'lrv'
+            ? 'bg-blue-600 text-white shadow-md'
+            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+        }`}
+      >
+        Lightness{' '}
+        {filterOptions.sortBy === 'lrv' &&
+          (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
+      </button>
+    </div>
+    <span className="text-sm text-gray-600 whitespace-nowrap">
+      {colorCount} {colorCount === 1 ? 'color' : 'colors'}
+    </span>
+  </div>
+)
+
 function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({
     colorCategories: [],
@@ -68,118 +174,52 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
     return filterOptions.colorCategories?.includes(categoryValue) || false
   }
 
+  const handleToggleSort = (sortBy: SortBy) => {
+    if (filterOptions.sortBy === sortBy) {
+      if (filterOptions.sortOrder === 'asc') {
+        updateFilters({ sortOrder: 'desc' })
+      } else {
+        updateFilters({ sortBy: undefined, sortOrder: undefined })
+      }
+    } else {
+      updateFilters({ sortBy, sortOrder: 'asc' })
+    }
+  }
+
   return (
     <div className="p-4 bg-gray-50 border-b border-gray-200">
       <div className="max-w-4xl mx-auto space-y-4">
-        {/* Search and Filters Section */}
         <div className="flex gap-4">
-          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
-            Search
-          </div>
+          <SectionLabel>Search</SectionLabel>
           <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-2">
-              <input
-                type="text"
-                placeholder="by name or code..."
-                value={filterOptions.searchText || ''}
-                onChange={(e) => updateFilters({ searchText: e.target.value })}
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Color Category Filters */}
-            <div className="flex flex-wrap gap-2">
-              {COLOR_CATEGORIES.map((category) => (
-                <button
-                  key={category.value}
-                  onClick={() => toggleCategory(category.value)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
-                    isCategoryActive(category.value)
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-                  }`}
-                >
-                  <span className={`w-4 h-4 rounded-full ${category.color}`} />
-                  {category.label}
-                </button>
-              ))}
-
-              {/* Cool colors Checkbox */}
-              <button
-                onClick={() =>
-                  updateFilters({
-                    coolColorsOnly: !filterOptions.coolColorsOnly,
-                  })
-                }
-                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
-                  filterOptions.coolColorsOnly
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-                }`}
-              >
-                <span>🌤️</span>
-                Cool
-              </button>
-            </div>
+            <SearchSection
+              searchText={filterOptions.searchText || ''}
+              onSearchChange={(text) => updateFilters({ searchText: text })}
+            />
           </div>
         </div>
 
-        {/* Sort Section */}
         <div className="flex gap-4">
-          <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
-            Sort
+          <SectionLabel>Browse</SectionLabel>
+          <div className="flex-1">
+            <BrowseSection
+              filterOptions={filterOptions}
+              toggleCategory={toggleCategory}
+              isCategoryActive={isCategoryActive}
+              onToggleCool={() =>
+                updateFilters({ coolColorsOnly: !filterOptions.coolColorsOnly })
+              }
+            />
           </div>
-          <div className="flex-1 flex items-center justify-between gap-2">
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => {
-                  if (filterOptions.sortBy === 'name') {
-                    if (filterOptions.sortOrder === 'asc') {
-                      updateFilters({ sortOrder: 'desc' })
-                    } else {
-                      updateFilters({ sortBy: undefined, sortOrder: undefined })
-                    }
-                  } else {
-                    updateFilters({ sortBy: 'name', sortOrder: 'asc' })
-                  }
-                }}
-                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
-                  filterOptions.sortBy === 'name'
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-                }`}
-              >
-                Name{' '}
-                {filterOptions.sortBy === 'name' &&
-                  (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
-              </button>
-              <button
-                onClick={() => {
-                  if (filterOptions.sortBy === 'lrv') {
-                    if (filterOptions.sortOrder === 'asc') {
-                      updateFilters({ sortOrder: 'desc' })
-                    } else {
-                      updateFilters({ sortBy: undefined, sortOrder: undefined })
-                    }
-                  } else {
-                    updateFilters({ sortBy: 'lrv', sortOrder: 'asc' })
-                  }
-                }}
-                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
-                  filterOptions.sortBy === 'lrv'
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
-                }`}
-              >
-                Lightness{' '}
-                {filterOptions.sortBy === 'lrv' &&
-                  (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
-              </button>
-            </div>
-            <span className="text-sm text-gray-600 whitespace-nowrap">
-              {colorCount} {colorCount === 1 ? 'color' : 'colors'}
-            </span>
-          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <SectionLabel>Sort</SectionLabel>
+          <SortSection
+            filterOptions={filterOptions}
+            onToggleSort={handleToggleSort}
+            colorCount={colorCount}
+          />
         </div>
       </div>
     </div>
