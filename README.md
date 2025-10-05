@@ -18,7 +18,3 @@ This project consists of two main components:
 - **Color Sets** - Create and manage custom color sets with drag-and-drop
 - **Persistent Storage** - Color sets are saved to browser localStorage
 - **Responsive Design** - Resizable split-pane layout that adapts to screen size
-
-## License
-
-This project is for educational and personal use.
