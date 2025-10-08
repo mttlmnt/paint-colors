@@ -8,7 +8,7 @@ import PencilIcon from '@heroicons/react/24/outline/PencilIcon'
 import EyeIcon from '@heroicons/react/24/outline/EyeIcon'
 import ColorSetPreview from './ColorSetPreview'
 import ConfirmationModal from './ConfirmationModal'
-import { rgbToString } from '@/utils/colorHelpers'
+import { colorToString } from '@/utils/colorHelpers'
 
 export default function ColorSet({
   id,
@@ -150,7 +150,7 @@ export default function ColorSet({
       {showPreview && (
         <ColorSetPreview
           colorInfos={filledColors.map(color => ({
-            color: rgbToString(color.rgb),
+            color: colorToString(color.rgb, color.lab),
             name: color.name,
             code: color.code
           }))}

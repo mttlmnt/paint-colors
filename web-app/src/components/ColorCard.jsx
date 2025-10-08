@@ -1,9 +1,9 @@
 import Swatch from './Swatch'
 import ColorPreview from './ColorPreview'
-import { rgbToString } from '@/utils/colorHelpers'
+import { colorToString } from '@/utils/colorHelpers'
 
 export default function ColorCard(props) {
-  const color = rgbToString(props.colorInfo.rgb)
+  const color = colorToString(props.colorInfo.rgb, props.colorInfo.lab)
 
   return (
     <div className="border rounded-md border-app bg-card p-4 flex flex-row items-center">
@@ -16,7 +16,7 @@ export default function ColorCard(props) {
         </span>
       </div>
       <ColorPreview color={color} colorName={props.colorInfo.name} colorCode={props.colorInfo.code}>
-        <Swatch colorRGB={props.colorInfo.rgb} />
+        <Swatch colorRGB={props.colorInfo.rgb} colorLAB={props.colorInfo.lab} />
       </ColorPreview>
     </div>
   )
