@@ -5,6 +5,9 @@ import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
 import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
 import TrashIcon from '@heroicons/react/24/outline/TrashIcon'
 import PencilIcon from '@heroicons/react/24/outline/PencilIcon'
+import EyeIcon from '@heroicons/react/24/outline/EyeIcon'
+import ColorSetPreview from './ColorSetPreview'
+import { rgbToString } from '@/utils/colorHelpers'
 
 export default function ColorSet({
   id,
@@ -17,6 +20,7 @@ export default function ColorSet({
 }) {
   const [isEditingName, setIsEditingName] = useState(false)
   const [editedName, setEditedName] = useState(name)
+  const [showPreview, setShowPreview] = useState(false)
 
   const addColorSlot = useCallback(() => {
     onUpdateColors([...colors, null])
@@ -52,6 +56,10 @@ export default function ColorSet({
   // Start with 3 empty slots if no colors yet
   const displayColors = colors.length === 0 ? [null, null, null] : colors
 
+  // Get non-null colors for preview
+  const filledColors = colors.filter(color => color !== null)
+  const hasColors = filledColors.length > 0
+
   return (
     <div className="flex-none bg-card rounded-lg shadow-md border border-app p-4 min-w-[300px]">
       {/* Header */}
@@ -78,15 +86,26 @@ export default function ColorSet({
             </button>
           </div>
         )}
-        {canDelete && (
-          <button
-            onClick={onDelete}
-            className="text-gray-400 hover:text-red-600 transition-colors"
-            title="Delete set"
-          >
-            <TrashIcon className="h-4 w-4" />
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {hasColors && (
+            <button
+              onClick={() => setShowPreview(true)}
+              className="text-gray-400 hover:text-blue-600 transition-colors"
+              title="Preview color set"
+            >
+              <EyeIcon className="h-4 w-4" />
+            </button>
+          )}
+          {canDelete && (
+            <button
+              onClick={onDelete}
+              className="text-gray-400 hover:text-red-600 transition-colors"
+              title="Delete set"
+            >
+              <TrashIcon className="h-4 w-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Color Slots */}
@@ -111,6 +130,18 @@ export default function ColorSet({
         <PlusIcon className="h-4 w-4" />
         <span className="text-sm font-medium">Add Color</span>
       </button>
+
+      {/* Preview Modal */}
+      {showPreview && (
+        <ColorSetPreview
+          colorInfos={filledColors.map(color => ({
+            color: rgbToString(color.rgb),
+            name: color.name,
+            code: color.code
+          }))}
+          onClose={() => setShowPreview(false)}
+        />
+      )}
     </div>
   )
 }

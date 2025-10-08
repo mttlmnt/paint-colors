@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, ReactNode } from 'react'
+import ColorSetPreview from './ColorSetPreview'
 
 interface ColorPreviewProps {
   color: string
@@ -44,16 +45,10 @@ export default function ColorPreview({ color, colorName, colorCode, children, ho
         {children}
       </div>
       {showPreview && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none bg-black/50 backdrop-blur-sm p-8">
-          <div className="w-full h-full rounded-lg shadow-2xl relative" style={{ backgroundColor: color }}>
-            {(colorName || colorCode) && (
-              <div className="absolute bottom-8 left-8 bg-black/70 backdrop-blur-md text-white px-6 py-4 rounded-lg">
-                {colorName && <div className="text-2xl font-semibold mb-1">{colorName}</div>}
-                {colorCode && <div className="text-sm font-extralight opacity-80">{colorCode}</div>}
-              </div>
-            )}
-          </div>
-        </div>
+        <ColorSetPreview
+          colorInfos={[{ color, name: colorName, code: colorCode }]}
+          onClose={() => setShowPreview(false)}
+        />
       )}
     </>
   )
