@@ -50,12 +50,12 @@ export default function Stage(props) {
   }, [])
 
   return (
-    <div className="flex-none bg-gray-100 border-t border-gray-300">
+    <div className="flex-none bg-app border-t border-gray-300 dark:border-gray-700">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-lg font-semibold text-gray-800">Color Sets</h2>
-            <p className="text-sm text-gray-600">
+            <h2 className="text-lg font-semibold text-heading">Color Sets</h2>
+            <p className="text-sm text-secondary">
               Drag colors here to create combinations
             </p>
           </div>

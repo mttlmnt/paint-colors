@@ -36,7 +36,7 @@ const COLOR_CATEGORIES: {
 ]
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <div className="text-base font-bold text-gray-800 pt-2 w-20 text-right">
+  <div className="text-base font-bold text-heading pt-2 w-20 text-right">
     {children}
   </div>
 )
@@ -54,7 +54,7 @@ const SearchSection = ({
       placeholder="by name or code..."
       value={searchText}
       onChange={(e) => onSearchChange(e.target.value)}
-      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-card text-primary"
     />
   </div>
 )
@@ -78,7 +78,7 @@ const BrowseSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
           isCategoryActive(category.value)
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         <span className={`w-4 h-4 rounded-full ${category.color}`} />
@@ -90,7 +90,7 @@ const BrowseSection = ({
       className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
         filterOptions.coolColorsOnly
           ? 'bg-blue-600 text-white shadow-md'
-          : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+          : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
       }`}
     >
       <span>🌤️</span>
@@ -115,7 +115,7 @@ const SortSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
           filterOptions.sortBy === 'name'
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         Name{' '}
@@ -127,7 +127,7 @@ const SortSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
           filterOptions.sortBy === 'lrv'
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
+            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         Lightness{' '}
@@ -135,7 +135,7 @@ const SortSection = ({
           (filterOptions.sortOrder === 'asc' ? '↑' : '↓')}
       </button>
     </div>
-    <span className="text-sm text-gray-600 whitespace-nowrap">
+    <span className="text-sm text-secondary whitespace-nowrap">
       {colorCount} {colorCount === 1 ? 'color' : 'colors'}
     </span>
   </div>
@@ -187,7 +187,7 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
   }
 
   return (
-    <div className="p-4 bg-gray-50 border-b border-gray-200">
+    <div className="p-4 bg-app border-b border-app">
       <div className="max-w-4xl mx-auto space-y-4">
         <div className="flex gap-4">
           <SectionLabel>Search</SectionLabel>

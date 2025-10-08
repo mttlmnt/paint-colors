@@ -105,7 +105,7 @@ export default function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div ref={containerRef} className="flex flex-col lg:flex-row h-screen overflow-hidden">
+      <div ref={containerRef} className="flex flex-col lg:flex-row h-screen overflow-hidden bg-app">
         <div className="flex-1 flex flex-col overflow-hidden min-h-0">
           <Header onFilterOptionsChanged={setFilterOptions} colorCount={filteredColors.length}></Header>
           <div className="flex-1 overflow-auto">
@@ -113,7 +113,7 @@ export default function App() {
           </div>
         </div>
         <div
-          className="border-t lg:border-t-0 lg:border-l border-gray-200 overflow-auto relative"
+          className="border-t lg:border-t-0 lg:border-l border-app overflow-auto relative"
           style={{ width: isLargeScreen ? stageWidth : '100%', height: isLargeScreen ? 'auto' : stageHeight }}
         >
           {/* Horizontal resize handle (large screens) */}
