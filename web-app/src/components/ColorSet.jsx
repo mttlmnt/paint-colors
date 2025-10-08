@@ -7,6 +7,7 @@ import TrashIcon from '@heroicons/react/24/outline/TrashIcon'
 import PencilIcon from '@heroicons/react/24/outline/PencilIcon'
 import EyeIcon from '@heroicons/react/24/outline/EyeIcon'
 import ColorSetPreview from './ColorSetPreview'
+import ConfirmationModal from './ConfirmationModal'
 import { rgbToString } from '@/utils/colorHelpers'
 
 export default function ColorSet({
@@ -21,6 +22,7 @@ export default function ColorSet({
   const [isEditingName, setIsEditingName] = useState(false)
   const [editedName, setEditedName] = useState(name)
   const [showPreview, setShowPreview] = useState(false)
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
   const addColorSlot = useCallback(() => {
     onUpdateColors([...colors, null])
@@ -51,6 +53,19 @@ export default function ColorSet({
       setEditedName(name)
     }
     setIsEditingName(false)
+  }
+
+  const handleDeleteClick = () => {
+    setShowDeleteConfirm(true)
+  }
+
+  const confirmDelete = () => {
+    setShowDeleteConfirm(false)
+    onDelete()
+  }
+
+  const cancelDelete = () => {
+    setShowDeleteConfirm(false)
   }
 
   // Start with 3 empty slots if no colors yet
@@ -98,7 +113,7 @@ export default function ColorSet({
           )}
           {canDelete && (
             <button
-              onClick={onDelete}
+              onClick={handleDeleteClick}
               className="text-gray-400 hover:text-red-600 transition-colors"
               title="Delete set"
             >
@@ -140,6 +155,17 @@ export default function ColorSet({
             code: color.code
           }))}
           onClose={() => setShowPreview(false)}
+        />
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {showDeleteConfirm && (
+        <ConfirmationModal
+          title="Delete Color Set?"
+          message={`Are you sure you want to delete "${name}"? This action cannot be undone.`}
+          confirmLabel="Delete"
+          onConfirm={confirmDelete}
+          onCancel={cancelDelete}
         />
       )}
     </div>
