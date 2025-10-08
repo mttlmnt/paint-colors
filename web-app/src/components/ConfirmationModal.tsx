@@ -17,7 +17,7 @@ export default function ConfirmationModal({
 }: ConfirmationModalProps) {
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-8"
+      className="modal-overlay flex items-center justify-center p-8"
       onClick={onCancel}
     >
       <div
@@ -29,7 +29,7 @@ export default function ConfirmationModal({
         <div className="flex gap-3 justify-end">
           <button
             onClick={onCancel}
-            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-heading hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="px-4 py-2 rounded-lg border border-input text-heading hover-bg-muted transition-colors"
           >
             {cancelLabel}
           </button>

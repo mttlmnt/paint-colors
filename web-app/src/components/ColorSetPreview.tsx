@@ -14,7 +14,7 @@ export default function ColorSetPreview({ colorInfos, onClose }: ColorSetPreview
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm p-8"
+      className="modal-overlay p-8"
       onClick={onClose}
     >
       <div className="w-full h-full rounded-lg shadow-2xl flex gap-4">

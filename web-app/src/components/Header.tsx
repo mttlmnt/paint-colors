@@ -54,7 +54,7 @@ const SearchSection = ({
       placeholder="by name or code..."
       value={searchText}
       onChange={(e) => onSearchChange(e.target.value)}
-      className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-card text-primary"
+      className="flex-1 px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-card text-primary"
     />
   </div>
 )
@@ -78,7 +78,7 @@ const BrowseSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
           isCategoryActive(category.value)
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
+            : 'bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         <span className={`w-4 h-4 rounded-full ${category.color}`} />
@@ -90,7 +90,7 @@ const BrowseSection = ({
       className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
         filterOptions.coolColorsOnly
           ? 'bg-blue-600 text-white shadow-md'
-          : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
+          : 'bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500'
       }`}
     >
       <span>🌤️</span>
@@ -115,7 +115,7 @@ const SortSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
           filterOptions.sortBy === 'name'
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
+            : 'bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         Name{' '}
@@ -127,7 +127,7 @@ const SortSection = ({
         className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
           filterOptions.sortBy === 'lrv'
             ? 'bg-blue-600 text-white shadow-md'
-            : 'bg-card text-heading border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500'
+            : 'bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500'
         }`}
       >
         Lightness{' '}
