@@ -62,7 +62,9 @@ export default function App() {
 
       const containerRect = containerRef.current.getBoundingClientRect()
       const newWidth = containerRect.right - e.clientX
-      setStageWidth(Math.max(256, Math.min(newWidth, containerRect.width - 256)))
+      setStageWidth(
+        Math.max(256, Math.min(newWidth, containerRect.width - 256))
+      )
     }
 
     const handleMouseUp = () => {
@@ -88,7 +90,9 @@ export default function App() {
 
       const containerRect = containerRef.current.getBoundingClientRect()
       const newHeight = containerRect.bottom - e.clientY
-      setStageHeight(Math.max(150, Math.min(newHeight, containerRect.height - 150)))
+      setStageHeight(
+        Math.max(150, Math.min(newHeight, containerRect.height - 150))
+      )
     }
 
     const handleMouseUp = () => {
@@ -105,16 +109,25 @@ export default function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div ref={containerRef} className="flex flex-col lg:flex-row h-screen overflow-hidden bg-app">
+      <div
+        ref={containerRef}
+        className="flex flex-col lg:flex-row h-screen overflow-hidden bg-app"
+      >
         <div className="flex-1 flex flex-col overflow-hidden min-h-0">
-          <Header onFilterOptionsChanged={setFilterOptions} colorCount={filteredColors.length}></Header>
+          <Header
+            onFilterOptionsChanged={setFilterOptions}
+            colorCount={filteredColors.length}
+          ></Header>
           <div className="flex-1 overflow-auto">
             <ColorCardList colors={filteredColors} />
           </div>
         </div>
         <div
           className="border-t lg:border-t-0 lg:border-l border-app overflow-auto relative"
-          style={{ width: isLargeScreen ? stageWidth : '100%', height: isLargeScreen ? 'auto' : stageHeight }}
+          style={{
+            width: isLargeScreen ? stageWidth : '100%',
+            height: isLargeScreen ? 'auto' : stageHeight,
+          }}
         >
           {/* Horizontal resize handle (large screens) */}
           <div
