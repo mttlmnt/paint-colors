@@ -40,7 +40,8 @@ def extract_items_from_index_page(file_path)
       urls = links_tr.xpath("td//a").map { |a| a.attribute("href").text }.select { |href| href.start_with? "preview" }
       8.times { trs.shift }
       codes.zip(urls).map do |code, url|
-        if code.length > 0
+        # Only include new-style color codes
+        if code.count('-') == 2
           IndexPageInfo.new(code, url)
         end
       end
