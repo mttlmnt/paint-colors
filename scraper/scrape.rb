@@ -1,9 +1,10 @@
 require "nokogiri"
 require "httparty"
 require "optparse"
+require "json"
 
 def download_index_page(page, letter:)
-  response = HTTParty.get("https://www.resene.co.nz/swatches/search.php?page=#{page}&type=letter&letter=#{letter}")
+  response = HTTParty.get("https://www.resene.co.nz/swatches/search.php?page=#{page}&type=letter&letter=#{letter}", verify: false)
   response.body if response.code == 200 && !response.body.include?("No swatches found")
 end
 
@@ -60,7 +61,7 @@ def unique_index_page_items(items)
 end
 
 def download_info_page(url_path)
-  response = HTTParty.get("https://www.resene.co.nz/swatches/#{url_path}")
+  response = HTTParty.get("https://www.resene.co.nz/swatches/#{url_path}", verify: false)
   response.body if response.code == 200
 end
 
