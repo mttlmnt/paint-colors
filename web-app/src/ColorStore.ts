@@ -8,8 +8,8 @@ class ColorStore {
   public colors(filterOptions: FilterOptions) {
     return this.colorList.filter((item) => {
       // Filter by cool colors
-      if (filterOptions.coolColorsOnly && !item.is_cool) {
-        return false
+      if (filterOptions.colorCategories.includes('cool') && item.is_cool) {
+        return true
       }
 
       // Filter by search text

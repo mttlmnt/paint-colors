@@ -1,9 +1,5 @@
 import { useState } from 'react'
-import {
-  FilterOptions,
-  ColorCategory,
-  SortBy,
-} from '@/FilterOptions'
+import { FilterOptions, ColorCategory, SortBy } from '@/FilterOptions'
 import SectionLabel from './SectionLabel'
 import SearchSection from './SearchSection'
 import BrowseSection from './BrowseSection'
@@ -76,12 +72,8 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
           <SectionLabel>Browse</SectionLabel>
           <div className="flex-1">
             <BrowseSection
-              filterOptions={filterOptions}
               toggleCategory={toggleCategory}
               isCategoryActive={isCategoryActive}
-              onToggleCool={() =>
-                updateFilters({ coolColorsOnly: !filterOptions.coolColorsOnly })
-              }
             />
           </div>
         </div>

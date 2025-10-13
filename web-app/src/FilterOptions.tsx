@@ -1,5 +1,6 @@
 export type ColorCategory =
   | 'all'
+  | 'cool'
   | 'red'
   | 'orange'
   | 'yellow'
@@ -18,7 +19,6 @@ export type SortOrder = 'asc' | 'desc'
 export interface FilterOptions {
   searchText?: string
   colorCategories?: ColorCategory[]
-  coolColorsOnly?: boolean
   sortBy?: SortBy
   sortOrder?: SortOrder
 }
