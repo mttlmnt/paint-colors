@@ -4,10 +4,12 @@ import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
 import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
 import ColorCardDraggable from './ColorCardDraggable'
 
-export default function StageDropTarget(props) {
-  const [{ canDrop, isOver }, drop] = useDrop(() => ({
+export default function StageDropTarget() {
+  const [colorInfo, setColorInfo] = useState()
+
+  const [{ isOver }, drop] = useDrop(() => ({
     accept: 'color-card',
-    drop: (item, monitor) => {
+    drop: (item) => {
       setColorInfo(item)
     },
     collect: (monitor) => ({
@@ -15,8 +17,6 @@ export default function StageDropTarget(props) {
       canDrop: monitor.canDrop(),
     }),
   }))
-
-  const [colorInfo, setColorInfo] = useState()
 
   return (
     <div

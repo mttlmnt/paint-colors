@@ -43,7 +43,7 @@ export default function ColorSet({
       workingColors[index] = colorInfo
       onUpdateColors(workingColors)
     },
-    [colors, onUpdateColors, id]
+    [colors, onUpdateColors]
   )
 
   const handleNameSave = () => {
@@ -173,10 +173,10 @@ export default function ColorSet({
 }
 
 function ColorSlot({ colorInfo, onDrop, onRemove }) {
-  const [{ canDrop, isOver }, drop] = useDrop(
+  const [{ isOver }, drop] = useDrop(
     () => ({
       accept: 'color-card',
-      drop: (item, monitor) => {
+      drop: (item) => {
         onDrop(item)
       },
       collect: (monitor) => ({

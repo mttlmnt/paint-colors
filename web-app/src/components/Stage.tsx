@@ -5,7 +5,7 @@ import { loadFromLocalStorage, saveToLocalStorage } from '@/utils/localStorage'
 
 const STORAGE_KEY = 'paint-colors-sets'
 
-export default function Stage(props) {
+export default function Stage() {
   const [colorSets, setColorSets] = useState(() => {
     return loadFromLocalStorage(STORAGE_KEY, [{ id: 1, name: 'Color Set 1', colors: [] }])
   })
