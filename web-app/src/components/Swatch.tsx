@@ -1,8 +1,8 @@
-import { colorToString } from "@/utils/colorHelpers"
+import { colorToString, RGB, LAB } from "@/utils/colorHelpers"
 
 export default function Swatch(props: {
-  colorRGB: { r: number; g: number; b: number }
-  colorLAB?: { l: number; a: number; b: number }
+  colorRGB: RGB
+  colorLAB?: LAB
 }) {
   return (
     <div

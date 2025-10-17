@@ -3,9 +3,10 @@ import { useDrop } from "react-dnd"
 import PlusIcon from "@heroicons/react/24/outline/PlusIcon"
 import SwatchIcon from "@heroicons/react/24/outline/SwatchIcon"
 import ColorCardDraggable from "./ColorCardDraggable"
+import { ColorInfo } from "@/types/ColorInfo"
 
 export default function StageDropTarget() {
-  const [colorInfo, setColorInfo] = useState()
+  const [colorInfo, setColorInfo] = useState<ColorInfo | undefined>()
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "color-card",
@@ -34,15 +35,19 @@ export default function StageDropTarget() {
   )
 }
 
-function Placeholder(props) {
+interface PlaceholderProps {
+  accept: boolean
+}
+
+function Placeholder({ accept }: PlaceholderProps) {
   return (
     <div className="m-4 flex flex-row items-center justify-center h-32 w-64">
-      {placeholderIcon(props.accept)}
+      {placeholderIcon(accept)}
     </div>
   )
 }
 
-function placeholderIcon(accept) {
+function placeholderIcon(accept: boolean) {
   return accept ? (
     <SwatchIcon className="h-16 w-16 text-blue-200" />
   ) : (

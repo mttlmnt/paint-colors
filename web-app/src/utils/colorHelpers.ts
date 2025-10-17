@@ -1,6 +1,12 @@
-interface RGB {
+export interface RGB {
   r: number
   g: number
+  b: number
+}
+
+export interface LAB {
+  l: number
+  a: number
   b: number
 }
 
@@ -8,13 +14,13 @@ export function rgbToString(rgb: RGB): string {
   return `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`
 }
 
-export function labToString(lab: { l: number; a: number; b: number }): string {
+export function labToString(lab: LAB): string {
   return `lab(${lab.l}% ${lab.a} ${lab.b})`
 }
 
 export function colorToString(
   rgb: RGB,
-  lab?: { l: number; a: number; b: number }
+  lab?: LAB
 ): string {
   // Use LAB if available for better color accuracy on wide-gamut displays
   // Falls back to RGB for browser compatibility

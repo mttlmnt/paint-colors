@@ -70,61 +70,59 @@ export default function App() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const startResizingHorizontal = (e: React.MouseEvent) => {
-    e.preventDefault()
-    isResizingRef.current = true
-    document.body.style.cursor = "col-resize"
-    document.body.style.userSelect = "none"
+  const createResizeHandler = (
+    dimension: "horizontal" | "vertical",
+    cursorStyle: string,
+    setSizeFunction: (size: number) => void,
+    calculateNewSize: (containerRect: DOMRect, mousePosition: number) => number,
+    minSize: number
+  ) => {
+    return (e: React.MouseEvent) => {
+      e.preventDefault()
+      isResizingRef.current = true
+      document.body.style.cursor = cursorStyle
+      document.body.style.userSelect = "none"
 
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isResizingRef.current || !containerRef.current) return
+      const handleMouseMove = (e: MouseEvent) => {
+        if (!isResizingRef.current || !containerRef.current) return
 
-      const containerRect = containerRef.current.getBoundingClientRect()
-      const newWidth = containerRect.right - e.clientX
-      setStageWidth(
-        Math.max(256, Math.min(newWidth, containerRect.width - 256))
-      )
+        const containerRect = containerRef.current.getBoundingClientRect()
+        const mousePos = dimension === "horizontal" ? e.clientX : e.clientY
+        const newSize = calculateNewSize(containerRect, mousePos)
+        const maxSize = dimension === "horizontal"
+          ? containerRect.width - minSize
+          : containerRect.height - minSize
+        setSizeFunction(Math.max(minSize, Math.min(newSize, maxSize)))
+      }
+
+      const handleMouseUp = () => {
+        isResizingRef.current = false
+        document.body.style.cursor = ""
+        document.body.style.userSelect = ""
+        document.removeEventListener("mousemove", handleMouseMove)
+        document.removeEventListener("mouseup", handleMouseUp)
+      }
+
+      document.addEventListener("mousemove", handleMouseMove)
+      document.addEventListener("mouseup", handleMouseUp)
     }
-
-    const handleMouseUp = () => {
-      isResizingRef.current = false
-      document.body.style.cursor = ""
-      document.body.style.userSelect = ""
-      document.removeEventListener("mousemove", handleMouseMove)
-      document.removeEventListener("mouseup", handleMouseUp)
-    }
-
-    document.addEventListener("mousemove", handleMouseMove)
-    document.addEventListener("mouseup", handleMouseUp)
   }
 
-  const startResizingVertical = (e: React.MouseEvent) => {
-    e.preventDefault()
-    isResizingRef.current = true
-    document.body.style.cursor = "row-resize"
-    document.body.style.userSelect = "none"
+  const startResizingHorizontal = createResizeHandler(
+    "horizontal",
+    "col-resize",
+    setStageWidth,
+    (rect, mouseX) => rect.right - mouseX,
+    256
+  )
 
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isResizingRef.current || !containerRef.current) return
-
-      const containerRect = containerRef.current.getBoundingClientRect()
-      const newHeight = containerRect.bottom - e.clientY
-      setStageHeight(
-        Math.max(150, Math.min(newHeight, containerRect.height - 150))
-      )
-    }
-
-    const handleMouseUp = () => {
-      isResizingRef.current = false
-      document.body.style.cursor = ""
-      document.body.style.userSelect = ""
-      document.removeEventListener("mousemove", handleMouseMove)
-      document.removeEventListener("mouseup", handleMouseUp)
-    }
-
-    document.addEventListener("mousemove", handleMouseMove)
-    document.addEventListener("mouseup", handleMouseUp)
-  }
+  const startResizingVertical = createResizeHandler(
+    "vertical",
+    "row-resize",
+    setStageHeight,
+    (rect, mouseY) => rect.bottom - mouseY,
+    150
+  )
 
   return (
     <DndProvider backend={HTML5Backend}>

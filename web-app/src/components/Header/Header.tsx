@@ -32,32 +32,41 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
     onFilterOptionsChanged(newFilterOptions)
   }
 
+  // Generic toggle function that cycles through include → exclude → inactive
+  const createToggleFilter = <T,>(
+    includedKey: keyof FilterOptions,
+    excludedKey: keyof FilterOptions
+  ) => {
+    return (value: T) => {
+      const included = (filterOptions[includedKey] as T[]) || []
+      const excluded = (filterOptions[excludedKey] as T[]) || []
+
+      if (included.includes(value)) {
+        // Move from include to exclude
+        updateFilters({
+          [includedKey]: included.filter(item => item !== value),
+          [excludedKey]: [...excluded, value],
+        } as Partial<FilterOptions>)
+      } else if (excluded.includes(value)) {
+        // Move from exclude to inactive
+        updateFilters({
+          [excludedKey]: excluded.filter(item => item !== value),
+        } as Partial<FilterOptions>)
+      } else {
+        // Move from inactive to include
+        updateFilters({
+          [includedKey]: [...included, value],
+        } as Partial<FilterOptions>)
+      }
+    }
+  }
+
   const toggleCategory = (categoryValue: ColorCategory) => {
     if (categoryValue === "all") {
       updateFilters({ colorCategories: [], excludedColorCategories: [] })
       return
     }
-
-    const included = filterOptions.colorCategories || []
-    const excluded = filterOptions.excludedColorCategories || []
-
-    if (included.includes(categoryValue)) {
-      // Move from include to exclude
-      updateFilters({
-        colorCategories: included.filter(c => c !== categoryValue),
-        excludedColorCategories: [...excluded, categoryValue],
-      })
-    } else if (excluded.includes(categoryValue)) {
-      // Move from exclude to inactive
-      updateFilters({
-        excludedColorCategories: excluded.filter(c => c !== categoryValue),
-      })
-    } else {
-      // Move from inactive to include
-      updateFilters({
-        colorCategories: [...included, categoryValue],
-      })
-    }
+    createToggleFilter<ColorCategory>("colorCategories", "excludedColorCategories")(categoryValue)
   }
 
   const getCategoryState = (categoryValue: ColorCategory): FilterState => {
@@ -87,25 +96,10 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
     }
   }
 
-  const toggleLuminanceRange = (range: LuminanceRange) => {
-    const included = filterOptions.luminanceRanges || []
-    const excluded = filterOptions.excludedLuminanceRanges || []
-
-    if (included.includes(range)) {
-      updateFilters({
-        luminanceRanges: included.filter(r => r !== range),
-        excludedLuminanceRanges: [...excluded, range],
-      })
-    } else if (excluded.includes(range)) {
-      updateFilters({
-        excludedLuminanceRanges: excluded.filter(r => r !== range),
-      })
-    } else {
-      updateFilters({
-        luminanceRanges: [...included, range],
-      })
-    }
-  }
+  const toggleLuminanceRange = createToggleFilter<LuminanceRange>(
+    "luminanceRanges",
+    "excludedLuminanceRanges"
+  )
 
   const getLuminanceState = (range: LuminanceRange): FilterState => {
     if (filterOptions.luminanceRanges?.includes(range)) return "include"
@@ -113,25 +107,10 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
     return "inactive"
   }
 
-  const toggleSaturationRange = (range: SaturationRange) => {
-    const included = filterOptions.saturationRanges || []
-    const excluded = filterOptions.excludedSaturationRanges || []
-
-    if (included.includes(range)) {
-      updateFilters({
-        saturationRanges: included.filter(r => r !== range),
-        excludedSaturationRanges: [...excluded, range],
-      })
-    } else if (excluded.includes(range)) {
-      updateFilters({
-        excludedSaturationRanges: excluded.filter(r => r !== range),
-      })
-    } else {
-      updateFilters({
-        saturationRanges: [...included, range],
-      })
-    }
-  }
+  const toggleSaturationRange = createToggleFilter<SaturationRange>(
+    "saturationRanges",
+    "excludedSaturationRanges"
+  )
 
   const getSaturationState = (range: SaturationRange): FilterState => {
     if (filterOptions.saturationRanges?.includes(range)) return "include"
@@ -148,23 +127,7 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
     }
 
     // Handle CompoundFilter types
-    const included = filterOptions.compoundFilters || []
-    const excluded = filterOptions.excludedCompoundFilters || []
-
-    if (included.includes(filter as CompoundFilter)) {
-      updateFilters({
-        compoundFilters: included.filter(f => f !== filter),
-        excludedCompoundFilters: [...excluded, filter as CompoundFilter],
-      })
-    } else if (excluded.includes(filter as CompoundFilter)) {
-      updateFilters({
-        excludedCompoundFilters: excluded.filter(f => f !== filter),
-      })
-    } else {
-      updateFilters({
-        compoundFilters: [...included, filter as CompoundFilter],
-      })
-    }
+    createToggleFilter<CompoundFilter>("compoundFilters", "excludedCompoundFilters")(filter as CompoundFilter)
   }
 
   const getSpecialFilterState = (

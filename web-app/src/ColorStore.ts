@@ -1,6 +1,7 @@
 import colorData from "../../scraper/colors.json"
 import { FilterOptions } from "@/FilterOptions"
 import { getColorGroup, decodeColorCode } from "@/utils/colorCodeDecoder"
+import { matchesLuminanceRange, matchesSaturationRange, matchesCompoundFilter } from "@/utils/filterHelpers"
 
 class ColorStore {
   private colorList = colorData.colors
@@ -82,14 +83,9 @@ class ColorStore {
         filterOptions.luminanceRanges.length > 0
       ) {
         const { luminance } = decoded
-        const matchesRange = filterOptions.luminanceRanges.some(range => {
-          if (range === "very-dark") return luminance >= 0 && luminance <= 20
-          if (range === "dark") return luminance >= 21 && luminance <= 40
-          if (range === "medium") return luminance >= 41 && luminance <= 60
-          if (range === "light") return luminance >= 61 && luminance <= 80
-          if (range === "very-light") return luminance >= 81 && luminance <= 100
-          return false
-        })
+        const matchesRange = filterOptions.luminanceRanges.some(range =>
+          matchesLuminanceRange(luminance, range)
+        )
         if (!matchesRange) return false
       }
 
@@ -99,16 +95,8 @@ class ColorStore {
         filterOptions.excludedLuminanceRanges.length > 0
       ) {
         const { luminance } = decoded
-        const matchesExcluded = filterOptions.excludedLuminanceRanges.some(
-          range => {
-            if (range === "very-dark") return luminance >= 0 && luminance <= 20
-            if (range === "dark") return luminance >= 21 && luminance <= 40
-            if (range === "medium") return luminance >= 41 && luminance <= 60
-            if (range === "light") return luminance >= 61 && luminance <= 80
-            if (range === "very-light")
-              return luminance >= 81 && luminance <= 100
-            return false
-          }
+        const matchesExcluded = filterOptions.excludedLuminanceRanges.some(range =>
+          matchesLuminanceRange(luminance, range)
         )
         if (matchesExcluded) return false
       }
@@ -119,13 +107,9 @@ class ColorStore {
         filterOptions.saturationRanges.length > 0
       ) {
         const { saturation } = decoded
-        const matchesRange = filterOptions.saturationRanges.some(range => {
-          if (range === "neutral") return saturation >= 0 && saturation <= 15
-          if (range === "muted") return saturation >= 16 && saturation <= 40
-          if (range === "moderate") return saturation >= 41 && saturation <= 70
-          if (range === "vibrant") return saturation >= 71 && saturation <= 100
-          return false
-        })
+        const matchesRange = filterOptions.saturationRanges.some(range =>
+          matchesSaturationRange(saturation, range)
+        )
         if (!matchesRange) return false
       }
 
@@ -135,16 +119,8 @@ class ColorStore {
         filterOptions.excludedSaturationRanges.length > 0
       ) {
         const { saturation } = decoded
-        const matchesExcluded = filterOptions.excludedSaturationRanges.some(
-          range => {
-            if (range === "neutral") return saturation >= 0 && saturation <= 15
-            if (range === "muted") return saturation >= 16 && saturation <= 40
-            if (range === "moderate")
-              return saturation >= 41 && saturation <= 70
-            if (range === "vibrant")
-              return saturation >= 71 && saturation <= 100
-            return false
-          }
+        const matchesExcluded = filterOptions.excludedSaturationRanges.some(range =>
+          matchesSaturationRange(saturation, range)
         )
         if (matchesExcluded) return false
       }
@@ -155,21 +131,9 @@ class ColorStore {
         filterOptions.compoundFilters.length > 0
       ) {
         const { luminance, saturation, group } = decoded
-        const matchesCompound = filterOptions.compoundFilters.some(filter => {
-          if (filter === "pastels") {
-            return luminance >= 70 && saturation >= 30 && saturation <= 60
-          }
-          if (filter === "earth-tones") {
-            return group === "BR"
-          }
-          if (filter === "deep-colors") {
-            return luminance >= 0 && luminance <= 40 && saturation >= 60
-          }
-          if (filter === "near-neutrals") {
-            return saturation >= 5 && saturation <= 20
-          }
-          return false
-        })
+        const matchesCompound = filterOptions.compoundFilters.some(filter =>
+          matchesCompoundFilter(filter, luminance, saturation, group)
+        )
         if (!matchesCompound) return false
       }
 
@@ -179,22 +143,8 @@ class ColorStore {
         filterOptions.excludedCompoundFilters.length > 0
       ) {
         const { luminance, saturation, group } = decoded
-        const matchesExcluded = filterOptions.excludedCompoundFilters.some(
-          filter => {
-            if (filter === "pastels") {
-              return luminance >= 70 && saturation >= 30 && saturation <= 60
-            }
-            if (filter === "earth-tones") {
-              return group === "BR"
-            }
-            if (filter === "deep-colors") {
-              return luminance >= 0 && luminance <= 40 && saturation >= 60
-            }
-            if (filter === "near-neutrals") {
-              return saturation >= 5 && saturation <= 20
-            }
-            return false
-          }
+        const matchesExcluded = filterOptions.excludedCompoundFilters.some(filter =>
+          matchesCompoundFilter(filter, luminance, saturation, group)
         )
         if (matchesExcluded) return false
       }

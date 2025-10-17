@@ -9,6 +9,17 @@ import EyeIcon from "@heroicons/react/24/outline/EyeIcon"
 import ColorSetPreview from "./ColorSetPreview"
 import ConfirmationModal from "./ConfirmationModal"
 import { colorToString } from "@/utils/colorHelpers"
+import { ColorInfo } from "@/types/ColorInfo"
+
+interface ColorSetProps {
+  id: string
+  name: string
+  colors: (ColorInfo | null)[]
+  onUpdateColors: (colors: (ColorInfo | null)[]) => void
+  onDelete: () => void
+  onRename: (newName: string) => void
+  canDelete: boolean
+}
 
 export default function ColorSet({
   id,
@@ -18,7 +29,7 @@ export default function ColorSet({
   onDelete,
   onRename,
   canDelete,
-}) {
+}: ColorSetProps) {
   const [isEditingName, setIsEditingName] = useState(false)
   const [editedName, setEditedName] = useState(name)
   const [showPreview, setShowPreview] = useState(false)
@@ -29,14 +40,14 @@ export default function ColorSet({
   }, [colors, onUpdateColors])
 
   const removeColorSlot = useCallback(
-    index => {
+    (index: number) => {
       onUpdateColors(colors.filter((_, i) => i !== index))
     },
     [colors, onUpdateColors]
   )
 
   const updateColor = useCallback(
-    (index, colorInfo) => {
+    (index: number, colorInfo: ColorInfo) => {
       // If colors array is empty, initialize with 3 slots
       const workingColors =
         colors.length === 0 ? [null, null, null] : [...colors]
@@ -172,11 +183,17 @@ export default function ColorSet({
   )
 }
 
-function ColorSlot({ colorInfo, onDrop, onRemove }) {
+interface ColorSlotProps {
+  colorInfo: ColorInfo | null
+  onDrop: (item: ColorInfo) => void
+  onRemove: (() => void) | null
+}
+
+function ColorSlot({ colorInfo, onDrop, onRemove }: ColorSlotProps) {
   const [{ isOver }, drop] = useDrop(
     () => ({
       accept: "color-card",
-      drop: item => {
+      drop: (item: ColorInfo) => {
         onDrop(item)
       },
       collect: monitor => ({

@@ -1,10 +1,15 @@
 import { useDrag } from "react-dnd"
 import ColorCard from "./ColorCard"
+import { ColorInfo } from "@/types/ColorInfo"
 
-export default function ColorCardDraggable(props) {
+interface ColorCardDraggableProps {
+  colorInfo: ColorInfo
+}
+
+export default function ColorCardDraggable({ colorInfo }: ColorCardDraggableProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "color-card",
-    item: props.colorInfo,
+    item: colorInfo,
     collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
@@ -12,7 +17,7 @@ export default function ColorCardDraggable(props) {
 
   return (
     <div ref={drag} style={{ cursor: "move", opacity: isDragging ? 0.5 : 1 }}>
-      <ColorCard colorInfo={props.colorInfo} />
+      <ColorCard colorInfo={colorInfo} />
     </div>
   )
 }
