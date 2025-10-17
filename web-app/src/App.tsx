@@ -7,6 +7,7 @@ import Stage from "@/components/Stage"
 import { Header } from "@/components/Header"
 import { FilterOptions } from "@/FilterOptions"
 import { rgbToHsl } from "@/utils/colorHelpers"
+import { decodeColorCode } from "@/utils/colorCodeDecoder"
 
 export default function App() {
   const [colorStore] = useState<ColorStore>(new ColorStore())
@@ -34,6 +35,24 @@ export default function App() {
           const lightnessA = rgbToHsl(a.rgb).l
           const lightnessB = rgbToHsl(b.rgb).l
           comparison = lightnessA - lightnessB
+        } else if (filterOptions.sortBy === "saturation") {
+          const decodedA = decodeColorCode(a.code)
+          const decodedB = decodeColorCode(b.code)
+          const satA = decodedA?.saturation ?? 0
+          const satB = decodedB?.saturation ?? 0
+          comparison = satA - satB
+        } else if (filterOptions.sortBy === "luminance") {
+          const decodedA = decodeColorCode(a.code)
+          const decodedB = decodeColorCode(b.code)
+          const lumA = decodedA?.luminance ?? 0
+          const lumB = decodedB?.luminance ?? 0
+          comparison = lumA - lumB
+        } else if (filterOptions.sortBy === "hue") {
+          const decodedA = decodeColorCode(a.code)
+          const decodedB = decodeColorCode(b.code)
+          const hueA = decodedA?.wheelPosition ?? 0
+          const hueB = decodedB?.wheelPosition ?? 0
+          comparison = hueA - hueB
         }
 
         return filterOptions.sortOrder === "desc" ? -comparison : comparison

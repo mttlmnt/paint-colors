@@ -1,5 +1,6 @@
-import { ColorCategory } from "@/FilterOptions"
+import { ColorCategory, FilterState } from "@/FilterOptions"
 import { COLOR_GROUP_INFO } from "@/utils/colorCodeDecoder"
+import TriStateButton from "./TriStateButton"
 
 const COLOR_CATEGORIES: {
   value: ColorCategory
@@ -21,41 +22,28 @@ const COLOR_CATEGORIES: {
   { value: "V", label: COLOR_GROUP_INFO.V.label, color: "bg-purple-500" },
   { value: "N", label: COLOR_GROUP_INFO.N.label, color: "bg-gray-400" },
   { value: "BR", label: COLOR_GROUP_INFO.BR.label, color: "bg-amber-800" },
-  {
-    value: "M",
-    label: COLOR_GROUP_INFO.M.label,
-    color: "bg-gradient-to-r from-gray-400 to-gray-600",
-  },
-  { value: "cool", label: "Cool", icon: "🌤️" },
 ]
 
 interface BrowseSectionProps {
   toggleCategory: (categoryValue: ColorCategory) => void
-  isCategoryActive: (categoryValue: ColorCategory) => boolean
+  getCategoryState: (categoryValue: ColorCategory) => FilterState
 }
 
 export default function BrowseSection({
   toggleCategory,
-  isCategoryActive,
+  getCategoryState,
 }: BrowseSectionProps) {
   return (
     <div className="flex flex-wrap gap-2">
       {COLOR_CATEGORIES.map(category => (
-        <button
+        <TriStateButton
           key={category.value}
+          label={category.label}
+          state={getCategoryState(category.value)}
           onClick={() => toggleCategory(category.value)}
-          className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
-            isCategoryActive(category.value)
-              ? "bg-blue-600 text-white shadow-md"
-              : "bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500"
-          }`}
-        >
-          {category.color && (
-            <span className={`w-4 h-4 rounded-full ${category.color}`} />
-          )}
-          {category.icon && <span>{category.icon}</span>}
-          {category.label}
-        </button>
+          color={category.color}
+          icon={category.icon}
+        />
       ))}
     </div>
   )
