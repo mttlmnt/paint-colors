@@ -1,4 +1,4 @@
-import { colorToString } from '@/utils/colorHelpers'
+import { colorToString } from "@/utils/colorHelpers"
 
 export default function Swatch(props: {
   colorRGB: { r: number; g: number; b: number }

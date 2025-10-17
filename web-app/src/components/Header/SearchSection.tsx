@@ -1,4 +1,4 @@
-import XMarkIcon from '@heroicons/react/24/outline/XMarkIcon'
+import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon"
 
 interface SearchSectionProps {
   searchText: string
@@ -15,12 +15,12 @@ export default function SearchSection({
         type="text"
         placeholder="by name or code..."
         value={searchText}
-        onChange={(e) => onSearchChange(e.target.value)}
+        onChange={e => onSearchChange(e.target.value)}
         className="flex-1 px-4 py-2 pr-10 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-card text-primary"
       />
       {searchText && (
         <button
-          onClick={() => onSearchChange('')}
+          onClick={() => onSearchChange("")}
           className="absolute right-3 text-icon hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           title="Clear search"
         >

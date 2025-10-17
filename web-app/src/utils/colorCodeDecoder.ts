@@ -6,7 +6,7 @@
  * - Last digits: Color wheel position (0-360 degrees)
  */
 
-export type ColorGroup = 'R' | 'O' | 'Y' | 'G' | 'B' | 'V' | 'N' | 'BR' | 'M'
+export type ColorGroup = "R" | "O" | "Y" | "G" | "B" | "V" | "N" | "BR" | "M"
 
 export interface DecodedColorCode {
   group: ColorGroup
@@ -16,19 +16,19 @@ export interface DecodedColorCode {
 }
 
 export const COLOR_GROUP_INFO = {
-  R: { label: 'Red', range: '357-39°', description: 'Red' },
-  O: { label: 'Orange', range: '40-69°', description: 'Orange' },
-  Y: { label: 'Yellow', range: '70-90°', description: 'Yellow' },
-  G: { label: 'Green', range: '91-204°', description: 'Green' },
-  B: { label: 'Blue', range: '205-284°', description: 'Blue' },
-  V: { label: 'Violet', range: '285-356°', description: 'Violet' },
-  N: { label: 'Neutral', range: 'Saturation 0-8', description: 'Neutral' },
+  R: { label: "Red", range: "357-39°", description: "Red" },
+  O: { label: "Orange", range: "40-69°", description: "Orange" },
+  Y: { label: "Yellow", range: "70-90°", description: "Yellow" },
+  G: { label: "Green", range: "91-204°", description: "Green" },
+  B: { label: "Blue", range: "205-284°", description: "Blue" },
+  V: { label: "Violet", range: "285-356°", description: "Violet" },
+  N: { label: "Neutral", range: "Saturation 0-8", description: "Neutral" },
   BR: {
-    label: 'Brown',
-    range: 'Lum 0-39, Sat 4-10 or Lum 40-80, Sat 4-25',
-    description: 'Brown',
+    label: "Brown",
+    range: "Lum 0-39, Sat 4-10 or Lum 40-80, Sat 4-25",
+    description: "Brown",
   },
-  M: { label: 'Metallic', range: 'Metallic tones', description: 'Metallic' },
+  M: { label: "Metallic", range: "Metallic tones", description: "Metallic" },
 } as const
 
 /**

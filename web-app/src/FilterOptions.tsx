@@ -1,9 +1,9 @@
-import { ColorGroup } from '@/utils/colorCodeDecoder'
+import { ColorGroup } from "@/utils/colorCodeDecoder"
 
-export type ColorCategory = 'all' | 'cool' | ColorGroup
+export type ColorCategory = "all" | "cool" | ColorGroup
 
-export type SortBy = 'name' | 'lrv'
-export type SortOrder = 'asc' | 'desc'
+export type SortBy = "name" | "lrv"
+export type SortOrder = "asc" | "desc"
 
 export interface FilterOptions {
   searchText?: string

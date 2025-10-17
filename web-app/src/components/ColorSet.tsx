@@ -1,14 +1,14 @@
-import { useState, useCallback } from 'react'
-import { useDrop } from 'react-dnd'
-import ColorCardDraggable from './ColorCardDraggable'
-import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
-import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
-import TrashIcon from '@heroicons/react/24/outline/TrashIcon'
-import PencilIcon from '@heroicons/react/24/outline/PencilIcon'
-import EyeIcon from '@heroicons/react/24/outline/EyeIcon'
-import ColorSetPreview from './ColorSetPreview'
-import ConfirmationModal from './ConfirmationModal'
-import { colorToString } from '@/utils/colorHelpers'
+import { useState, useCallback } from "react"
+import { useDrop } from "react-dnd"
+import ColorCardDraggable from "./ColorCardDraggable"
+import PlusIcon from "@heroicons/react/24/outline/PlusIcon"
+import SwatchIcon from "@heroicons/react/24/outline/SwatchIcon"
+import TrashIcon from "@heroicons/react/24/outline/TrashIcon"
+import PencilIcon from "@heroicons/react/24/outline/PencilIcon"
+import EyeIcon from "@heroicons/react/24/outline/EyeIcon"
+import ColorSetPreview from "./ColorSetPreview"
+import ConfirmationModal from "./ConfirmationModal"
+import { colorToString } from "@/utils/colorHelpers"
 
 export default function ColorSet({
   id,
@@ -29,7 +29,7 @@ export default function ColorSet({
   }, [colors, onUpdateColors])
 
   const removeColorSlot = useCallback(
-    (index) => {
+    index => {
       onUpdateColors(colors.filter((_, i) => i !== index))
     },
     [colors, onUpdateColors]
@@ -83,9 +83,9 @@ export default function ColorSet({
           <input
             type="text"
             value={editedName}
-            onChange={(e) => setEditedName(e.target.value)}
+            onChange={e => setEditedName(e.target.value)}
             onBlur={handleNameSave}
-            onKeyDown={(e) => e.key === 'Enter' && handleNameSave()}
+            onKeyDown={e => e.key === "Enter" && handleNameSave()}
             className="text-sm font-semibold text-heading bg-card border border-blue-400 dark:border-blue-500 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             autoFocus
           />
@@ -129,7 +129,7 @@ export default function ColorSet({
           <ColorSlot
             key={`slot-${id}-${index}`}
             colorInfo={color}
-            onDrop={(item) => updateColor(index, item)}
+            onDrop={item => updateColor(index, item)}
             onRemove={
               colors.length > 0 && color ? () => removeColorSlot(index) : null
             }
@@ -152,7 +152,7 @@ export default function ColorSet({
           colorInfos={filledColors.map(color => ({
             color: colorToString(color.rgb, color.lab),
             name: color.name,
-            code: color.code
+            code: color.code,
           }))}
           onClose={() => setShowPreview(false)}
         />
@@ -175,11 +175,11 @@ export default function ColorSet({
 function ColorSlot({ colorInfo, onDrop, onRemove }) {
   const [{ isOver }, drop] = useDrop(
     () => ({
-      accept: 'color-card',
-      drop: (item) => {
+      accept: "color-card",
+      drop: item => {
         onDrop(item)
       },
-      collect: (monitor) => ({
+      collect: monitor => ({
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
       }),
@@ -213,7 +213,9 @@ function Placeholder({ isOver }) {
   return (
     <div
       className={`p-4 flex justify-center border rounded-md transition-all ${
-        isOver ? 'border-blue-400 bg-blue-50 dark:bg-blue-950' : 'border-input bg-card'
+        isOver
+          ? "border-blue-400 bg-blue-50 dark:bg-blue-950"
+          : "border-input bg-card"
       }`}
     >
       <div className="w-32 h-32 flex items-center justify-center">

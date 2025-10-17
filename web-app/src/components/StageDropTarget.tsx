@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { useDrop } from 'react-dnd'
-import PlusIcon from '@heroicons/react/24/outline/PlusIcon'
-import SwatchIcon from '@heroicons/react/24/outline/SwatchIcon'
-import ColorCardDraggable from './ColorCardDraggable'
+import { useState } from "react"
+import { useDrop } from "react-dnd"
+import PlusIcon from "@heroicons/react/24/outline/PlusIcon"
+import SwatchIcon from "@heroicons/react/24/outline/SwatchIcon"
+import ColorCardDraggable from "./ColorCardDraggable"
 
 export default function StageDropTarget() {
   const [colorInfo, setColorInfo] = useState()
 
   const [{ isOver }, drop] = useDrop(() => ({
-    accept: 'color-card',
-    drop: (item) => {
+    accept: "color-card",
+    drop: item => {
       setColorInfo(item)
     },
-    collect: (monitor) => ({
+    collect: monitor => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
     }),
@@ -22,7 +22,7 @@ export default function StageDropTarget() {
     <div
       ref={drop}
       className={
-        'border rounded border-gray-20 ' + (isOver ? 'bg-gray-100' : 'bg-white')
+        "border rounded border-gray-20 " + (isOver ? "bg-gray-100" : "bg-white")
       }
     >
       {isOver || !colorInfo ? (

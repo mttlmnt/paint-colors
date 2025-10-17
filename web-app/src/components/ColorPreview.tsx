@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, ReactNode } from 'react'
-import ColorSetPreview from './ColorSetPreview'
+import { useState, useEffect, useRef, ReactNode } from "react"
+import ColorSetPreview from "./ColorSetPreview"
 
 interface ColorPreviewProps {
   color: string
@@ -9,7 +9,13 @@ interface ColorPreviewProps {
   hoverDelay?: number
 }
 
-export default function ColorPreview({ color, colorName, colorCode, children, hoverDelay = 1000 }: ColorPreviewProps) {
+export default function ColorPreview({
+  color,
+  colorName,
+  colorCode,
+  children,
+  hoverDelay = 1000,
+}: ColorPreviewProps) {
   const [showPreview, setShowPreview] = useState(false)
   const hoverTimerRef = useRef<number | null>(null)
 

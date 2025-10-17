@@ -10,8 +10,8 @@ interface ConfirmationModalProps {
 export default function ConfirmationModal({
   title,
   message,
-  confirmLabel = 'Confirm',
-  cancelLabel = 'Cancel',
+  confirmLabel = "Confirm",
+  cancelLabel = "Cancel",
   onConfirm,
   onCancel,
 }: ConfirmationModalProps) {
@@ -22,7 +22,7 @@ export default function ConfirmationModal({
     >
       <div
         className="bg-card border border-app rounded-lg shadow-2xl p-6 max-w-md"
-        onClick={(e) => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
       >
         <h3 className="text-xl font-semibold text-heading mb-2">{title}</h3>
         <p className="text-secondary mb-6">{message}</p>

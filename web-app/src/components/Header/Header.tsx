@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { FilterOptions, ColorCategory, SortBy } from '@/FilterOptions'
-import SectionLabel from './SectionLabel'
-import SearchSection from './SearchSection'
-import BrowseSection from './BrowseSection'
-import SortSection from './SortSection'
+import { useState } from "react"
+import { FilterOptions, ColorCategory, SortBy } from "@/FilterOptions"
+import SectionLabel from "./SectionLabel"
+import SearchSection from "./SearchSection"
+import BrowseSection from "./BrowseSection"
+import SortSection from "./SortSection"
 
 type HeaderProps = {
   onFilterOptionsChanged: (filterOptions: FilterOptions) => void
@@ -22,19 +22,19 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
   }
 
   const toggleCategory = (categoryValue: ColorCategory) => {
-    if (categoryValue === 'all') {
+    if (categoryValue === "all") {
       updateFilters({ colorCategories: [] })
     } else {
       const currentCategories = filterOptions.colorCategories || []
       const newCategories = currentCategories.includes(categoryValue)
-        ? currentCategories.filter((c) => c !== categoryValue)
+        ? currentCategories.filter(c => c !== categoryValue)
         : [...currentCategories, categoryValue]
       updateFilters({ colorCategories: newCategories })
     }
   }
 
   const isCategoryActive = (categoryValue: ColorCategory) => {
-    if (categoryValue === 'all') {
+    if (categoryValue === "all") {
       return (
         !filterOptions.colorCategories ||
         filterOptions.colorCategories.length === 0
@@ -45,13 +45,13 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
 
   const handleToggleSort = (sortBy: SortBy) => {
     if (filterOptions.sortBy === sortBy) {
-      if (filterOptions.sortOrder === 'asc') {
-        updateFilters({ sortOrder: 'desc' })
+      if (filterOptions.sortOrder === "asc") {
+        updateFilters({ sortOrder: "desc" })
       } else {
         updateFilters({ sortBy: undefined, sortOrder: undefined })
       }
     } else {
-      updateFilters({ sortBy, sortOrder: 'asc' })
+      updateFilters({ sortBy, sortOrder: "asc" })
     }
   }
 
@@ -62,8 +62,8 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
           <SectionLabel>Search</SectionLabel>
           <div className="flex-1 space-y-4">
             <SearchSection
-              searchText={filterOptions.searchText || ''}
-              onSearchChange={(text) => updateFilters({ searchText: text })}
+              searchText={filterOptions.searchText || ""}
+              onSearchChange={text => updateFilters({ searchText: text })}
             />
           </div>
         </div>

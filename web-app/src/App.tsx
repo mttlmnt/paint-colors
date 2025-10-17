@@ -1,12 +1,12 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
-import { DndProvider } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
-import ColorCardList from '@/components/ColorCardList'
-import { ColorStore } from '@/ColorStore'
-import Stage from '@/components/Stage'
-import { Header } from '@/components/Header'
-import { FilterOptions } from '@/FilterOptions'
-import { rgbToHsl } from '@/utils/colorHelpers'
+import { useState, useMemo, useRef, useEffect } from "react"
+import { DndProvider } from "react-dnd"
+import { HTML5Backend } from "react-dnd-html5-backend"
+import ColorCardList from "@/components/ColorCardList"
+import { ColorStore } from "@/ColorStore"
+import Stage from "@/components/Stage"
+import { Header } from "@/components/Header"
+import { FilterOptions } from "@/FilterOptions"
+import { rgbToHsl } from "@/utils/colorHelpers"
 
 export default function App() {
   const [colorStore] = useState<ColorStore>(new ColorStore())
@@ -27,16 +27,16 @@ export default function App() {
       colors = [...colors].sort((a, b) => {
         let comparison = 0
 
-        if (filterOptions.sortBy === 'name') {
+        if (filterOptions.sortBy === "name") {
           comparison = a.name.localeCompare(b.name)
-        } else if (filterOptions.sortBy === 'lrv') {
+        } else if (filterOptions.sortBy === "lrv") {
           // Calculate lightness from RGB for more reliable sorting
           const lightnessA = rgbToHsl(a.rgb).l
           const lightnessB = rgbToHsl(b.rgb).l
           comparison = lightnessA - lightnessB
         }
 
-        return filterOptions.sortOrder === 'desc' ? -comparison : comparison
+        return filterOptions.sortOrder === "desc" ? -comparison : comparison
       })
     }
 
@@ -47,15 +47,15 @@ export default function App() {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024)
     }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   const startResizingHorizontal = (e: React.MouseEvent) => {
     e.preventDefault()
     isResizingRef.current = true
-    document.body.style.cursor = 'col-resize'
-    document.body.style.userSelect = 'none'
+    document.body.style.cursor = "col-resize"
+    document.body.style.userSelect = "none"
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isResizingRef.current || !containerRef.current) return
@@ -69,21 +69,21 @@ export default function App() {
 
     const handleMouseUp = () => {
       isResizingRef.current = false
-      document.body.style.cursor = ''
-      document.body.style.userSelect = ''
-      document.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseup', handleMouseUp)
+      document.body.style.cursor = ""
+      document.body.style.userSelect = ""
+      document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("mouseup", handleMouseUp)
     }
 
-    document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('mouseup', handleMouseUp)
+    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mouseup", handleMouseUp)
   }
 
   const startResizingVertical = (e: React.MouseEvent) => {
     e.preventDefault()
     isResizingRef.current = true
-    document.body.style.cursor = 'row-resize'
-    document.body.style.userSelect = 'none'
+    document.body.style.cursor = "row-resize"
+    document.body.style.userSelect = "none"
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isResizingRef.current || !containerRef.current) return
@@ -97,14 +97,14 @@ export default function App() {
 
     const handleMouseUp = () => {
       isResizingRef.current = false
-      document.body.style.cursor = ''
-      document.body.style.userSelect = ''
-      document.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseup', handleMouseUp)
+      document.body.style.cursor = ""
+      document.body.style.userSelect = ""
+      document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("mouseup", handleMouseUp)
     }
 
-    document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('mouseup', handleMouseUp)
+    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mouseup", handleMouseUp)
   }
 
   return (
@@ -125,8 +125,8 @@ export default function App() {
         <div
           className="border-t lg:border-t-0 lg:border-l border-app overflow-auto relative"
           style={{
-            width: isLargeScreen ? stageWidth : '100%',
-            height: isLargeScreen ? 'auto' : stageHeight,
+            width: isLargeScreen ? stageWidth : "100%",
+            height: isLargeScreen ? "auto" : stageHeight,
           }}
         >
           {/* Horizontal resize handle (large screens) */}

@@ -1,6 +1,6 @@
-import Swatch from './Swatch'
-import ColorPreview from './ColorPreview'
-import { colorToString } from '@/utils/colorHelpers'
+import Swatch from "./Swatch"
+import ColorPreview from "./ColorPreview"
+import { colorToString } from "@/utils/colorHelpers"
 
 export default function ColorCard(props) {
   const color = colorToString(props.colorInfo.rgb, props.colorInfo.lab)
@@ -15,7 +15,11 @@ export default function ColorCard(props) {
           {props.colorInfo.code}
         </span>
       </div>
-      <ColorPreview color={color} colorName={props.colorInfo.name} colorCode={props.colorInfo.code}>
+      <ColorPreview
+        color={color}
+        colorName={props.colorInfo.name}
+        colorCode={props.colorInfo.code}
+      >
         <Swatch colorRGB={props.colorInfo.rgb} colorLAB={props.colorInfo.lab} />
       </ColorPreview>
     </div>

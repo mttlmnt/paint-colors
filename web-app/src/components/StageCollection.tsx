@@ -1,4 +1,4 @@
-import StageDropTarget from './StageDropTarget'
+import StageDropTarget from "./StageDropTarget"
 
 export default function StageCollection() {
   return (
