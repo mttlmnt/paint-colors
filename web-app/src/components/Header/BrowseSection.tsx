@@ -1,29 +1,32 @@
-import { FilterOptions, ColorCategory } from '@/FilterOptions'
+import { ColorCategory } from '@/FilterOptions'
+import { COLOR_GROUP_INFO } from '@/utils/colorCodeDecoder'
 
 const COLOR_CATEGORIES: {
   value: ColorCategory
   label: string
-  color: string | undefined
-  icon: string | undefined
+  color?: string
+  icon?: string
 }[] = [
   {
     value: 'all',
     label: 'All',
-    color: 'bg-gradient-to-r from-red-500 via-green-500 to-blue-500',
-    icon: undefined,
+    color:
+      'bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500',
   },
-  { value: 'cool', label: 'Cool', color: undefined, icon: '🌤️' },
-  { value: 'red', label: 'Reds', color: 'bg-red-500', icon: undefined },
-  { value: 'orange', label: 'Oranges', color: 'bg-orange-500', icon: undefined },
-  { value: 'yellow', label: 'Yellows', color: 'bg-yellow-400', icon: undefined },
-  { value: 'green', label: 'Greens', color: 'bg-green-500', icon: undefined },
-  { value: 'blue', label: 'Blues', color: 'bg-blue-500', icon: undefined },
-  { value: 'purple', label: 'Purples', color: 'bg-purple-500', icon: undefined },
-  { value: 'pink', label: 'Pinks', color: 'bg-pink-400', icon: undefined },
-  { value: 'brown', label: 'Browns', color: 'bg-amber-800', icon: undefined },
-  { value: 'gray', label: 'Grays', color: 'bg-gray-500', icon: undefined },
-  { value: 'black', label: 'Blacks', color: 'bg-black', icon: undefined },
-  { value: 'white', label: 'Whites', color: 'bg-white border border-gray-300', icon: undefined },
+  { value: 'R', label: COLOR_GROUP_INFO.R.label, color: 'bg-red-500' },
+  { value: 'O', label: COLOR_GROUP_INFO.O.label, color: 'bg-orange-500' },
+  { value: 'Y', label: COLOR_GROUP_INFO.Y.label, color: 'bg-yellow-400' },
+  { value: 'G', label: COLOR_GROUP_INFO.G.label, color: 'bg-green-500' },
+  { value: 'B', label: COLOR_GROUP_INFO.B.label, color: 'bg-blue-500' },
+  { value: 'V', label: COLOR_GROUP_INFO.V.label, color: 'bg-purple-500' },
+  { value: 'N', label: COLOR_GROUP_INFO.N.label, color: 'bg-gray-400' },
+  { value: 'BR', label: COLOR_GROUP_INFO.BR.label, color: 'bg-amber-800' },
+  {
+    value: 'M',
+    label: COLOR_GROUP_INFO.M.label,
+    color: 'bg-gradient-to-r from-gray-400 to-gray-600',
+  },
+  { value: 'cool', label: 'Cool', icon: '🌤️' },
 ]
 
 interface BrowseSectionProps {

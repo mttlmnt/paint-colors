@@ -1,17 +1,6 @@
-export type ColorCategory =
-  | 'all'
-  | 'cool'
-  | 'red'
-  | 'orange'
-  | 'yellow'
-  | 'green'
-  | 'blue'
-  | 'purple'
-  | 'pink'
-  | 'brown'
-  | 'gray'
-  | 'black'
-  | 'white'
+import { ColorGroup } from '@/utils/colorCodeDecoder'
+
+export type ColorCategory = 'all' | 'cool' | ColorGroup
 
 export type SortBy = 'name' | 'lrv'
 export type SortOrder = 'asc' | 'desc'

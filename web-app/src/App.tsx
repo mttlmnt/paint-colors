@@ -6,7 +6,7 @@ import { ColorStore } from '@/ColorStore'
 import Stage from '@/components/Stage'
 import { Header } from '@/components/Header'
 import { FilterOptions } from '@/FilterOptions'
-import { rgbToHsl } from '@/utils/colorCategories'
+import { rgbToHsl } from '@/utils/colorHelpers'
 
 export default function App() {
   const [colorStore] = useState<ColorStore>(new ColorStore())
