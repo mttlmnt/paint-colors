@@ -19,9 +19,9 @@ export default function TriStateButton({
 }: TriStateButtonProps) {
   const getButtonClass = () => {
     if (state === "include") {
-      return "bg-blue-600 text-white shadow-md"
+      return "bg-blue-600 text-white shadow-md border border-transparent"
     } else if (state === "exclude") {
-      return "bg-red-400 text-white shadow-md"
+      return "bg-red-400 text-white shadow-md border border-transparent"
     }
     return "bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500"
   }
