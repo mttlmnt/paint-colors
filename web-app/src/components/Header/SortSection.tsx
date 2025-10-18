@@ -26,7 +26,7 @@ export default function SortSection({
           <button
             key={option.value}
             onClick={() => onToggleSort(option.value)}
-            className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${
+            className={`px-2 py-1 rounded text-xs font-medium transition-all flex items-center gap-1.5 whitespace-nowrap ${
               filterOptions.sortBy === option.value
                 ? "bg-blue-600 text-white shadow-md"
                 : "bg-card text-heading border border-input hover:border-blue-400 dark:hover:border-blue-500"

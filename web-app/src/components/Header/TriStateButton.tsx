@@ -29,7 +29,7 @@ export default function TriStateButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 whitespace-nowrap ${getButtonClass()}`}
+      className={`px-2 py-1 rounded text-xs font-medium transition-all flex items-center gap-1.5 whitespace-nowrap ${getButtonClass()}`}
     >
       {state === "exclude" && <span>🚫</span>}
       {color && <span className={`w-4 h-4 rounded-full ${color}`} />}

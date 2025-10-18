@@ -162,7 +162,7 @@ function Header({ onFilterOptionsChanged, colorCount }: HeaderProps) {
         </div>
 
         <div className="flex gap-4">
-          <SectionLabel>Browse</SectionLabel>
+          <SectionLabel topAlign>Browse</SectionLabel>
           <div className="flex-1 space-y-4">
             <div className="flex gap-4 pl-4">
               <SectionLabel subdued>Color</SectionLabel>
